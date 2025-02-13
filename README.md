@@ -3,6 +3,20 @@
 
 Este é um projeto de landing page interativa para apresentação de um currículo. Ele conta com um efeito de **flip card**, permitindo que os visitantes alternem entre as informações pessoais e os projetos do desenvolvedor.
 
+## 🚀 Atualizações
+
+### [📅 2025-02-13] - Melhorias no layout e efeitos
+- Aumentei o tamanho da foto de perfil.
+- Alterei a tipografia para uma combinação mais marcante.
+- Adicionei um efeito *hover* nos ícones de redes sociais.
+- Ajustei o posicionamento dos botões dentro do cartão.
+
+### [📅 2025-02-12] - Primeira versão lançada
+- Site criado e hospedado na AWS S3.
+- Cartão de visita digital com links para redes sociais.
+- Página de projetos interativa com efeito de virar.
+
+
 ## 📌 Funcionalidades
 
 - Exibição de foto, nome e cidade.
