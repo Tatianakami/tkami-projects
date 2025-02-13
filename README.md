@@ -10,6 +10,7 @@ Este é um projeto de landing page interativa para apresentação de um currícu
 - Alterei a tipografia para uma combinação mais marcante.
 - Adicionei um efeito *hover* nos ícones de redes sociais.
 - Ajustei o posicionamento dos botões dentro do cartão.
+- Adicionei o documento JSON com a permissão para a bucker do S3.
 
 ### [📅 2025-02-12] - Primeira versão lançada
 - Site criado e hospedado na AWS S3.
@@ -35,6 +36,21 @@ Este é um projeto de landing page interativa para apresentação de um currícu
 ## 🌍 Hospedagem
 
 Este projeto será hospedado na **AWS S3**, utilizando a funcionalidade de **Static Website Hosting**, garantindo alta disponibilidade e escalabilidade.
+
+### Configuração do Bucket S3 para Acesso Público
+
+Para garantir que os arquivos do seu site sejam acessíveis ao público, é necessário configurar a política de acesso do seu bucket S3 na AWS. Você pode encontrar a política de acesso do bucket S3 no arquivo [bucket-policy.json](https://github.com/eduardolentz/website-eduardolentz/blob/main/bucket-policy.json).
+
+
+### Explicação Rápida:
+
+- **Version**: Define a versão da política. Use sempre `2012-10-17`.
+- **Sid**: Identificador único para a política. Pode ser qualquer nome.
+- **Effect**: Especifica o efeito da política. `Allow` permite a ação; `Deny` nega.
+- **Principal**: Quem tem permissão para acessar. `*` permite acesso público.
+- **Action**: A ação permitida. Neste caso, `s3:GetObject` permite leitura dos objetos.
+- **Resource**: O recurso ao qual a política se aplica. `arn:aws:s3:::eduardolentz-website/*` permite o acesso a todos os arquivos dentro do bucket.
+
 
 ## 🔧 Como Rodar o Projeto Localmente
 
@@ -64,5 +80,5 @@ Este projeto está sob a licença MIT. Sinta-se à vontade para utilizá-lo e mo
 
 ---
 
-Feito por [Eduardo Lentz](https://github.com/seuusuario).
+Feito por [Eduardo Lentz](https://github.com/eduardolentz).
 
