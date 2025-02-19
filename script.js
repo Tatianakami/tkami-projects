@@ -12,38 +12,35 @@ function flipCardToTech() {
 // ------------------------------------------------------------------------
  // Dados de exemplo para projetos Python (pode ser adaptado para outras tecnologias)
 const projectsData = {
+  // MODELO: { title: "Projeto", tags: ["tag"], description: "Descrição.", site: "", repo: "", article:"" }
+  Cloud: [
+    { title: "Projeto Cloud 1", tags: ["AWS"], description: "Site estático no S3", site: "", repo: "", article:"" },
+    
+  ],
   Python: [
-    { title: "Projeto Python 1", tags: ["Data Science"], description: "Descrição breve 1.", site: "https://www.w3schools.com/charsets/tryit.asp?deci=11144", repo: "https://www.w3schools.com/charsets/tryit.asp?deci=11144", article:"https://www.w3schools.com/charsets/tryit.asp?deci=11144" },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Data Science"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Data Science"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Data Science"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Data Science"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Data Science"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Data Science"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Data Science"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    // ... adicione mais projetos conforme necessário
-    // ... adicione mais projetos conforme necessário
+    { title: "Projeto Python 1", tags: ["Data Science"], description: "Descrição breve 1.", site: "", repo: "", article:"" },
+    
+  ],
+  DevOps: [
+    { title: "Projeto DevOps 1", tags: ["Docker"], description: "Em construção", site: "", repo: "", article:"" },
+    
+  ],
+  Dados: [
+    { title: "Projeto Dados 1", tags: ["SQL"], description: "Em construção", site: "", repo: "", article:"" },
+    
+  ],
+  FrontEnd: [
+    { title: "Web site portifólio", 
+      tags: ["html+css+js"], 
+      description: "Landing page interativa para apresentar meu currículo e projetos", 
+      site: "www.eduardolentz.com.br", 
+      repo: "https://github.com/eduardolentz/website-eduardolentz", 
+      article:"",
+      doc:""},
+    
   ],
 
-  Java: [
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Desk"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Data Science"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Data Science"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    { title: "Projeto Python 1", description: "Descrição breve 1.", site: "https://exemplo.com/site1", repo: "https://github.com/exemplo/repo1", tags: ["Data Science"] },
-    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://exemplo.com/site2", repo: "https://github.com/exemplo/repo2", tags: ["Web"] },
-    // ... adicione mais projetos conforme necessário
-  ]
+
 };
 
 let currentTech = "";
@@ -121,13 +118,16 @@ function renderProjects() {
     // Constrói os botões de acordo com as propriedades do projeto
     let buttonsHtml = "";
     if (proj.site) {
-      buttonsHtml += `<a href="${proj.site}" target="_blank" class="border border-blue-800 text-blue-800 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-800 hover:text-white">Front</a>`;
+      buttonsHtml += `<a href="${proj.site}" target="_blank" class="border border-yellow-600 text-yellow-600 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-yellow-600 hover:text-white">Front</a>`;
     }
     if (proj.repo) {
       buttonsHtml += `<a href="${proj.repo}" target="_blank" class="border border-purple-900 text-purple-900 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-purple-900 hover:text-white">Repositório</a>`;
     }
     if (proj.article) {
       buttonsHtml += `<a href="${proj.article}" target="_blank" class="border border-orange-800 text-orange-800 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-orange-800 hover:text-white">Artigo</a>`;
+    }
+    if (proj.doc) {
+      buttonsHtml += `<a href="${proj.doc}" target="_blank" class="border border-blue-800 text-blue-800 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-800 hover:text-white">Documentação</a>`;
     }
     
     projectDiv.innerHTML = `

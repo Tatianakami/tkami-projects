@@ -84,7 +84,7 @@ body {
   
 #projectsScreen.active {
     opacity: 1;
-    width: 620px;       /* Leve expansão horizontal */
+    width: 650px;       /* Leve expansão horizontal */
     min-height: 570px;  /* Leve expansão vertical */
     pointer-events: auto;
 }
