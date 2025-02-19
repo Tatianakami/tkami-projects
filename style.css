@@ -110,6 +110,11 @@ body {
     align-items: center;
 }
 
+#badgesScreen img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 #badgesScreen.active {
     opacity: 1;
     pointer-events: auto;
