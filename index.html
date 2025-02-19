@@ -123,21 +123,13 @@
         Perfil
       </button>
     </div>
-    <!-- Controles de paginação à direita -->
-    <div class="flex gap-2 items-center">
-      <button
-        id="prevPage"
-        onclick="prevPage()"
-        class="border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white"
-      >
-      &#129092;
+    <!-- Controles de paginação  -->
+    <div id="paginationControls" class="flex gap-2 items-center">
+      <button id="prevPage" onclick="prevPage()" class="border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
+        &#129092;
       </button>
       <span id="pageIndicator" class="text-gray-600"></span>
-      <button
-        id="nextPage"
-        onclick="nextPage()"
-        class="border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white"
-      >
+      <button id="nextPage" onclick="nextPage()" class="border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
         &#129094;
       </button>
     </div>

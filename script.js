@@ -150,18 +150,25 @@ function renderProjects() {
 
 function renderPagination() {
   const projects = projectsData[currentTech] || [];
-  const filtered = currentFilter ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter)) : projects;
+  const filtered = currentFilter
+    ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter))
+    : projects;
   const totalPages = Math.ceil(filtered.length / projectsPerPage);
   
+  const paginationControls = document.getElementById("paginationControls");
   const pageIndicator = document.getElementById("pageIndicator");
+  
   if (totalPages > 1) {
+    paginationControls.classList.remove("hidden");
     pageIndicator.innerText = `Página ${currentPage} de ${totalPages}`;
     document.getElementById("prevPage").disabled = (currentPage === 1);
     document.getElementById("nextPage").disabled = (currentPage === totalPages);
   } else {
+    paginationControls.classList.add("hidden");
     pageIndicator.innerText = "";
   }
 }
+
 
 function nextPage() {
   const projects = projectsData[currentTech] || [];
