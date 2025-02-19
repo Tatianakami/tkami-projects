@@ -1,142 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="imagens/icone.png">
-    <title>Eduardo Lentz</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        h1, h2 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-        }
-        
-        p, {
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
-        }        
-        /* Estilo para o efeito de virar o cartão */
-        .flip-container {
-            perspective: 1000px;
-            width: 100%;
-            max-width: 400px; /* Largura máxima do cartão */
-        }
-        .flipper {
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            min-height: 500px; /* Altura mínima para cobrir o conteúdo */
-        }
-        .flipped {
-            transform: rotateY(180deg);
-        }
-        .front, .back {
-            backface-visibility: hidden; /* Oculta a face oposta durante a rotação */
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 1.5rem; /* Espaçamento interno */
-            box-sizing: border-box; /* Garante que o padding não aumente o tamanho */
-            border-radius: 1rem; /* Borda arredondada */
-        }
-        .front {
-            z-index: 2;
-            transform: rotateY(0deg); /* Frente visível inicialmente */
-            background: white; /* Fundo branco para a frente */
-        }
-        .back {
-            transform: rotateY(180deg); /* Verso oculto inicialmente */
-            z-index: 1;
-            background: white; /* Fundo cinza para o verso */
-        }
-        #local {
-            font-size: 12px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="imagens/icone.png">
+  <title>Eduardo Lentz</title>
+  <!-- Link para o arquivo CSS customizado -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-400 flex items-center justify-center min-h-screen p-4">
-    <div class="flip-container">
-        <div id="card" class="flipper">
-            <!-- Frente do Cartão (Currículo) -->
-            <div class="front">
-                <img src="imagens/foto-perfil.jpg" alt="Foto de perfil" class="w-48 h-48 rounded-full mx-auto">
-                <h1 class="text-2xl font-bold mt-4">Eduardo O. Lentz</h1>
-                <p class="text-gray-600">Cloud Computing | Eng. de Software</p>
-                <div class="mt-4">
-                    <p id="local">📍 Torres, Rio Grande do Sul, Brasil</p>
-                </div>
-                <!-- Links de Contato -->
-                <div class="flex justify-center gap-4 mt-8">
-                    <a href="https://wa.me/5551992131010" target="_blank">
-                        <img src="imagens/whatsapp.png" alt="WhatsApp" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300">
-                    </a>
-                    <a href="https://www.linkedin.com/in/eduardolentz/" target="_blank">
-                        <img src="imagens/linkedin.png" alt="LinkedIn" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300">
-                    </a>
-                    <a href="https://github.com/eduardolentz" target="_blank">
-                        <img src="imagens/github.png" alt="GitHub" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300">
-                    </a>
-                    <a href="https://gitlab.com/eduardo.lentz" target="_blank">
-                        <img src="imagens/gitlab.png" alt="GitLab" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300">
-                    </a>
-                    <a href="https://www.instagram.com/eduardolntz" target="_blank">
-                        <img src="imagens/instagram.png" alt="Instagram" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300">
-                    </a>
-                    <a href="https://medium.com/@eduardolentz" target="_blank">
-                        <img src="imagens/medium.png" alt="Medium" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300">
-                    </a>
-                    <a href="mailto:eduardo.lentz@gmail.com" target="_blank">
-                        <img src="imagens/email.png" alt="E-mail" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300">
-                    </a>
-                </div>
-                <!-- Botões -->
-                <div class="mt-auto flex justify-center gap-4">
-                    <a href="Curriculo.2025.01.pdf" target="_blank" download class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
-                        📄 Baixar Currículo
-                    </a>
-                    <button onclick="flipCard()" class="bg-green-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-700 transition">
-                        🚀 Projetos
-                    </button>
-                </div>
-            </div>
-            <!-- Verso do Cartão (Projetos) -->
-            <div class="back">
-                <h2 class="text-2xl font-bold">Projetos</h2>
-                <div class="mt-4 flex flex-col gap-3">
-                    <a href="https://github.com/eduardolentz/website-eduardolentz" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition">
-                        💾 Código do Site
-                    </a>
-                    <a href="https://github.com/eduardolentz/linux-iac-ubuntuserver" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition">
-                        🐧 Iac Linux
-                    </a>
-                    <a href="https://github.com/eduardolentz/python-udemy-andreiacono" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition">
-                        🐍 Exercícios de Python
-                    </a>
-                    <a href="https://github.com/eduardolentz/docker-conversao-distancia" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition">
-                        🐳 Docker
-                    </a>
-                </div>
-                <button onclick="flipCard()" class="mt-auto bg-red-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-700 transition">
-                    🔙 Voltar
-                </button>
-            </div>
+<body class="flex items-center justify-center min-h-screen p-4 relative">
+  <!-- Container do flip: Telas 1 (Perfil) e 2 (Tecnologias) -->
+  <div id="flipContainer" class="flip-container">
+    <div id="card" class="flipper">
+      <!-- Tela 1: Perfil -->
+      <div class="front">
+        <img src="imagens/foto-perfil.jpg" alt="Foto de perfil" class="w-48 h-48 rounded-full mx-auto" />
+        <h1 class="text-3xl font-bold mt-4">Eduardo O. Lentz</h1>
+        <p class="text-gray-600">Cloud Computing | Eng. de Software</p>
+        <div class="mt-4">
+          <p id="local">📍 Torres, Rio Grande do Sul, Brasil</p>
         </div>
+        <!-- Área de redes sociais -->
+        <div class="flex justify-center gap-4 mt-8">
+          <a href="https://wa.me/5551992131010" target="_blank">
+            <img src="imagens/whatsapp.png" alt="WhatsApp" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
+          </a>
+          <a href="https://www.linkedin.com/in/eduardolentz/" target="_blank">
+            <img src="imagens/linkedin.png" alt="LinkedIn" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
+          </a>
+          <a href="https://github.com/eduardolentz" target="_blank">
+            <img src="imagens/github.png" alt="GitHub" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
+          </a>
+          <a href="https://gitlab.com/eduardo.lentz" target="_blank">
+            <img src="imagens/gitlab.png" alt="GitLab" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
+          </a>
+          <a href="https://www.instagram.com/eduardolntz" target="_blank">
+            <img src="imagens/instagram.png" alt="Instagram" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
+          </a>
+          <a href="https://medium.com/@eduardolentz" target="_blank">
+            <img src="imagens/medium.png" alt="Medium" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
+          </a>
+          <a href="mailto:eduardo.lentz@gmail.com" target="_blank">
+            <img src="imagens/email.png" alt="E-mail" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
+          </a>
+        </div>
+        <!-- Botões: Baixar Currículo e Tecnologias -->
+        <div class="mt-auto flex justify-center gap-4">
+          <!-- Botão com borda azul -->
+          <a href="Curriculo.2025.01.pdf" target="_blank" download
+            class="border border-blue-700 text-blue-700 px-4 py-2 rounded-full shadow-md transition hover:bg-blue-700 hover:text-white">
+            📄 Baixar Currículo
+          </a>
+          <!-- Botão com borda verde -->
+          <button onclick="flipCardToTech()"
+            class="border border-green-800 text-green-800 px-4 py-2 rounded-full shadow-md transition hover:bg-green-800 hover:text-white">
+            🚀 Tecnologias
+          </button>
+        </div>
+      </div>
+      <!-- Tela 2: Tecnologias -->
+      <div class="back">
+        <h2 class="text-2xl font-bold">Tecnologias</h2>
+        <div class="mt-4 flex flex-col gap-3">
+          <!-- Botões outline com hover preenchido -->
+          <button onclick="showProjects('Python')"
+            class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
+            🐍 Python
+          </button>
+          <button onclick="showProjects('Java')"
+            class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
+            ☕ Java
+          </button>
+          <button onclick="showProjects('JavaScript')"
+            class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
+            💻 JavaScript
+          </button>
+        </div>
+        <button onclick="flipCardToProfile()"
+          class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
+          🔙 Voltar
+        </button>
+      </div>
     </div>
-
-    <script>
-        function flipCard() {
-            const card = document.getElementById('card');
-            card.classList.toggle('flipped');
-        }
-    </script>
+  </div>
+  
+  <!-- Tela 3: Projetos (inicialmente oculta) -->
+  <div id="projectsScreen">
+    <!-- Título centralizado -->
+    <h2 class="text-2xl font-bold mb-4 text-center">Projetos em <span id="techTitle"></span></h2>
+    <!-- Grid com dois projetos por linha (quatro projetos no total) -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-gray-100 p-3 rounded-lg shadow">
+        <h3 class="font-semibold text-sm">Projeto 1</h3>
+        <p class="text-xs text-gray-600">Descrição breve 1.</p>
+        <div class="mt-2 flex gap-1">
+          <a href="#"
+            class="border border-blue-500 text-blue-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-500 hover:text-white">Site</a>
+          <a href="#"
+            class="border border-green-500 text-green-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-green-500 hover:text-white">Repo</a>
+        </div>
+      </div>
+      <div class="bg-gray-100 p-3 rounded-lg shadow">
+        <h3 class="font-semibold text-sm">Projeto 2</h3>
+        <p class="text-xs text-gray-600">Descrição breve 2.</p>
+        <div class="mt-2 flex gap-1">
+          <a href="#"
+            class="border border-blue-500 text-blue-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-500 hover:text-white">Site</a>
+          <a href="#"
+            class="border border-green-500 text-green-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-green-500 hover:text-white">Repo</a>
+        </div>
+      </div>
+      <div class="bg-gray-100 p-3 rounded-lg shadow">
+        <h3 class="font-semibold text-sm">Projeto 3</h3>
+        <p class="text-xs text-gray-600">Descrição breve 3.</p>
+        <div class="mt-2 flex gap-1">
+          <a href="#"
+            class="border border-blue-500 text-blue-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-500 hover:text-white">Site</a>
+          <a href="#"
+            class="border border-green-500 text-green-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-green-500 hover:text-white">Repo</a>
+        </div>
+      </div>
+      <div class="bg-gray-100 p-3 rounded-lg shadow">
+        <h3 class="font-semibold text-sm">Projeto 4</h3>
+        <p class="text-xs text-gray-600">Descrição breve 4.</p>
+        <div class="mt-2 flex gap-1">
+          <a href="#"
+            class="border border-blue-500 text-blue-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-500 hover:text-white">Site</a>
+          <a href="#"
+            class="border border-green-500 text-green-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-green-500 hover:text-white">Repo</a>
+        </div>
+      </div>
+    </div>
+    <!-- Rodapé com botões centralizados na parte inferior -->
+    <div class="mt-auto flex justify-center gap-4">
+      <button onclick="hideProjects()"
+        class="border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
+        🔙 Voltar
+      </button>
+      <button onclick="goHome()"
+        class="border border-orange-500 text-orange-500 px-4 py-2 rounded-full shadow-md transition hover:bg-orange-500 hover:text-white">
+        🏠 Home
+      </button>
+    </div>
+  </div>
+  
+  <!-- Link para o arquivo JS customizado -->
+  <script src="script.js"></script>
 </body>
 </html>
