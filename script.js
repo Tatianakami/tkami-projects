@@ -33,7 +33,7 @@ const projectsData = {
     { title: "Web site portifólio", 
       tags: ["html+css+js"], 
       description: "Landing page interativa para apresentar meu currículo e projetos", 
-      site: "https://s3.us-east-2.amazonaws.com/eduardolentz.com.br/index.html", 
+      site: "", 
       repo: "https://github.com/eduardolentz/website-eduardolentz", 
       article:"",
       doc:""},
