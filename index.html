@@ -48,7 +48,7 @@
             <img src="imagens/email.png" alt="E-mail" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
           </a>
         </div>
-        <!-- Botões: Baixar Currículo e Tecnologias -->
+        <!-- Botões: Baixar Currículo e Projetos -->
         <div class="mt-8 flex justify-center gap-4">
           <button onclick="showBadges()"
             class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">
@@ -64,91 +64,48 @@
           </button>
         </div>
       </div>
-      <!-- Tela 2: Tecnologias -->
-      <div class="back">
-        <h2 class="text-2xl font-bold">Tecnologias</h2>
-        <div class="mt-4 flex flex-col gap-3">
-          <!-- Botões outline com hover preenchido -->
-          <button onclick="showProjects('Python')"
-            class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            🐍 Python
-          </button>
-          <button onclick="showProjects('Java')"
-            class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            ☕ Java
-          </button>
-          <button onclick="showProjects('JavaScript')"
-            class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            💻 JavaScript
-          </button>
-        </div>
-        <button onclick="flipCardToProfile()"
-          class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
-          Voltar
-        </button>
-      </div>
+      <!-- Tela de Tecnologias (2ª Tela) -->
+<div class="back">
+  <h2 class="text-2xl font-bold">Tecnologias</h2>
+  <div class="mt-4 flex flex-col gap-3">
+    <button onclick="showProjects('Python')"
+      class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
+      🐍 Python
+    </button>
+    <button onclick="showProjects('Java')"
+      class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
+      ☕ Java
+    </button>
+    <button onclick="showProjects('JavaScript')"
+      class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
+      💻 JavaScript
+    </button>
+  </div>
+  <button onclick="flipCardToProfile()"
+    class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
+    Voltar
+  </button>
+</div>
     </div>
   </div>
   
-  <!-- Tela 3: Projetos (inicialmente oculta) -->
-  <div id="projectsScreen">
-    <!-- Título centralizado -->
-    <h2 class="text-2xl font-bold mb-4 text-center">Projetos em <span id="techTitle"></span></h2>
-    <!-- Grid com dois projetos por linha (quatro projetos no total) -->
-    <div class="grid grid-cols-2 gap-4">
-      <div class="bg-gray-100 p-3 rounded-lg shadow">
-        <h3 class="font-semibold text-sm">Projeto 1</h3>
-        <p class="text-xs text-gray-600">Descrição breve 1.</p>
-        <div class="mt-2 flex gap-1">
-          <a href="#"
-            class="border border-blue-500 text-blue-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-500 hover:text-white">Site</a>
-          <a href="#"
-            class="border border-green-500 text-green-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-green-500 hover:text-white">Repo</a>
-        </div>
-      </div>
-      <div class="bg-gray-100 p-3 rounded-lg shadow">
-        <h3 class="font-semibold text-sm">Projeto 2</h3>
-        <p class="text-xs text-gray-600">Descrição breve 2.</p>
-        <div class="mt-2 flex gap-1">
-          <a href="#"
-            class="border border-blue-500 text-blue-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-500 hover:text-white">Site</a>
-          <a href="#"
-            class="border border-green-500 text-green-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-green-500 hover:text-white">Repo</a>
-        </div>
-      </div>
-      <div class="bg-gray-100 p-3 rounded-lg shadow">
-        <h3 class="font-semibold text-sm">Projeto 3</h3>
-        <p class="text-xs text-gray-600">Descrição breve 3.</p>
-        <div class="mt-2 flex gap-1">
-          <a href="#"
-            class="border border-blue-500 text-blue-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-500 hover:text-white">Site</a>
-          <a href="#"
-            class="border border-green-500 text-green-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-green-500 hover:text-white">Repo</a>
-        </div>
-      </div>
-      <div class="bg-gray-100 p-3 rounded-lg shadow">
-        <h3 class="font-semibold text-sm">Projeto 4</h3>
-        <p class="text-xs text-gray-600">Descrição breve 4.</p>
-        <div class="mt-2 flex gap-1">
-          <a href="#"
-            class="border border-blue-500 text-blue-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-500 hover:text-white">Site</a>
-          <a href="#"
-            class="border border-green-500 text-green-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-green-500 hover:text-white">Repo</a>
-        </div>
-      </div>
-    </div>
-    <!-- Rodapé com botões centralizados na parte inferior -->
-    <div class="mt-auto flex justify-center gap-4">
-      <button onclick="hideProjects()"
-        class="border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
-        Voltar
-      </button>
-      <button onclick="goHome()"
-        class="border border-orange-500 text-orange-500 px-4 py-2 rounded-full shadow-md transition hover:bg-orange-500 hover:text-white">
-        Home
-      </button>
-    </div>
+  <!-- Tela de Projetos (3ª Tela) -->
+<div id="projectsScreen" class="fixed inset-0 flex flex-col items-center justify-start bg-gray-200 p-6 opacity-0 pointer-events-none transition-all duration-400" style="z-index: 50;">
+  <h2 class="text-2xl font-bold mb-4 text-center">Projetos em <span id="techTitle"></span></h2>
+  <div id="projectsContainer" class="grid grid-cols-2 gap-4 w-full">
+    <!-- Conteúdo dos projetos será inserido aqui via JS -->
   </div>
+  <div class="mt-auto flex justify-center gap-4 w-full">
+    <button onclick="hideProjects()"
+      class="border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
+      Voltar
+    </button>
+    <button onclick="goHome()"
+      class="border border-orange-500 text-orange-500 px-4 py-2 rounded-full shadow-md transition hover:bg-orange-500 hover:text-white">
+      Home
+    </button>
+  </div>
+</div>
   
   <!-- Tela de Badges (Separada) -->
 <div id="badgesScreen" class="flex flex-col items-center p-6" style="height: 500px;">

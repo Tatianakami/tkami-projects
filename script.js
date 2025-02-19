@@ -10,26 +10,63 @@ function flipCardToTech() {
     document.getElementById("card").classList.remove("flipped");
   }
   
-  // Exibe a Tela 3 (Projetos) com a tecnologia selecionada
-  function showProjects(tech) {
-    console.log("showProjects: " + tech);
-    document.getElementById("techTitle").innerText = tech;
-    document.getElementById("projectsScreen").classList.add("active");
+  // Dados dos projetos para cada tecnologia
+const projectsData = {
+  Python: [
+    { title: "Projeto Python Teste", description: "Teste teste Descrição breve 1.", site: "", repo: "#" },
+    { title: "Projeto Python Teste", description: "Teste teste Descrição breve 1.", site: "", repo: "#" },
+    { title: "Projeto Python Teste", description: "Teste teste Descrição breve 1.", site: "", repo: "#" },
+    { title: "Projeto Python Teste", description: "Teste teste Descrição breve 1.", site: "", repo: "#" },
+    { title: "Projeto Python Teste", description: "Teste teste Descrição breve 1.", site: "", repo: "#" },
+    { title: "Projeto Python Teste", description: "Teste teste Descrição breve 1.", site: "", repo: "#" },
+    { title: "Projeto Python Teste", description: "Teste teste Descrição breve 1.", site: "", repo: "#" },
+    { title: "Projeto Python 2", description: "Descrição breve 2.", site: "https://github.com/eduardolentz/fullstack-python-EBAC", repo: "https://github.com/eduardolentz/fullstack-python-EBAC" }
+  ],
+  Java: [
+    { title: "Projeto Java 1", description: "Descrição breve 1.", site: "#", repo: "#" },
+    { title: "Projeto Java 2", description: "Descrição breve 2.", site: "#", repo: "#" }
+  ],
+  JavaScript: [
+    { title: "Projeto JS 1", description: "Descrição breve 1.", site: "#", repo: "#" },
+    { title: "Projeto JS 2", description: "Descrição breve 2.", site: "#", repo: "#" }
+  ]
+};
+
+function showProjects(tech) {
+  // Atualiza o título da tela de projetos
+  document.getElementById("techTitle").innerText = tech;
+
+  // Limpa o container e insere os projetos correspondentes
+  const container = document.getElementById("projectsContainer");
+  container.innerHTML = ""; // Limpa projetos anteriores
+  if (projectsData[tech]) {
+    projectsData[tech].forEach(proj => {
+      const projectDiv = document.createElement("div");
+      projectDiv.className = "bg-gray-100 p-3 rounded-lg shadow";
+      projectDiv.innerHTML = `
+        <h3 class="font-semibold text-sm">${proj.title}</h3>
+        <p class="text-xs text-gray-600">${proj.description}</p>
+        <div class="mt-2 flex gap-1">
+          <a href="${proj.site}" target="_blank" class="border border-blue-500 text-blue-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-500 hover:text-white">Site</a>
+          <a href="${proj.repo}" target="_blank" class="border border-green-500 text-green-500 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-green-500 hover:text-white">Repo</a>
+        </div>
+      `;
+      container.appendChild(projectDiv);
+    });
   }
-  
-  // Oculta a Tela 3 (retorna à Tela 2)
-  function hideProjects() {
-    console.log("hideProjects");
-    document.getElementById("projectsScreen").classList.remove("active");
-  }
-  
-  // Retorna à Tela 1 (Perfil) a partir da Tela 3
-  function goHome() {
-    console.log("goHome");
-    hideProjects();
-    document.getElementById("card").classList.remove("flipped");
-  }
-  
+  // Exibe a tela de projetos
+  document.getElementById("projectsScreen").classList.add("active");
+}
+
+function hideProjects() {
+  document.getElementById("projectsScreen").classList.remove("active");
+}
+
+function goHome() {
+  hideProjects();
+  document.getElementById("card").classList.remove("flipped");
+}
+
   // Funções para a tela de Badges
   function showBadges() {
     // Oculta o flipContainer e exibe a tela de badges
