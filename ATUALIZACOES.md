@@ -1,11 +1,12 @@
 # 🚀 Atualizações
 
+### [📅 2025-02-19] - Adicionando tele
+- Adicionei mais um tela para badges de certificações 
+
 ### [📅 2025-02-18] - Refatoração e melhorias
 
 - Refatoração do Código: Código dividido em três arquivos: `index.html`, `style.css` e `script.js`
-
 - Mudanças no estilo: Botões com estilo "outline" e ajustes nas dimensões para um visual mais equilibrado.
-
 - Adição da Terceira Tela: Nova tela de Projetos integrada ao layout.
 
 

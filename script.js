@@ -30,3 +30,14 @@ function flipCardToTech() {
     document.getElementById("card").classList.remove("flipped");
   }
   
+  // Funções para a tela de Badges
+  function showBadges() {
+    // Oculta o flipContainer e exibe a tela de badges
+    document.getElementById("flipContainer").style.display = "none";
+    document.getElementById("badgesScreen").classList.add("active");
+  }
+  function voltarDosBadges() {
+    // Esconde a tela de badges e retorna o flipContainer
+    document.getElementById("badgesScreen").classList.remove("active");
+    document.getElementById("flipContainer").style.display = "block";
+  }

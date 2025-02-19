@@ -49,16 +49,18 @@
           </a>
         </div>
         <!-- Botões: Baixar Currículo e Tecnologias -->
-        <div class="mt-auto flex justify-center gap-4">
-          <!-- Botão com borda azul -->
+        <div class="mt-8 flex justify-center gap-4">
+          <button onclick="showBadges()"
+            class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">
+            Badges
+          </button>
           <a href="Curriculo.2025.01.pdf" target="_blank" download
-            class="border border-blue-700 text-blue-700 px-4 py-2 rounded-full shadow-md transition hover:bg-blue-700 hover:text-white">
-            📄 Baixar Currículo
+            class="border border-blue-700 text-blue-700 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-blue-700 hover:text-white">
+            Currículo PDF
           </a>
-          <!-- Botão com borda verde -->
           <button onclick="flipCardToTech()"
-            class="border border-green-800 text-green-800 px-4 py-2 rounded-full shadow-md transition hover:bg-green-800 hover:text-white">
-            🚀 Tecnologias
+            class="border border-green-800 text-green-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-green-800 hover:text-white">
+            Projetos
           </button>
         </div>
       </div>
@@ -82,7 +84,7 @@
         </div>
         <button onclick="flipCardToProfile()"
           class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
-          🔙 Voltar
+          Voltar
         </button>
       </div>
     </div>
@@ -139,15 +141,34 @@
     <div class="mt-auto flex justify-center gap-4">
       <button onclick="hideProjects()"
         class="border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
-        🔙 Voltar
+        Voltar
       </button>
       <button onclick="goHome()"
         class="border border-orange-500 text-orange-500 px-4 py-2 rounded-full shadow-md transition hover:bg-orange-500 hover:text-white">
-        🏠 Home
+        Home
       </button>
     </div>
   </div>
   
+  <!-- Tela de Badges (Separada) -->
+<div id="badgesScreen" class="flex flex-col items-center p-6" style="height: 500px;">
+  <h2 class="text-2xl font-bold text-center mb-4">Badges</h2>
+  <!-- Container para as imagens -->
+  <div class="flex justify-center gap-4">
+    <img src="imagens/badges/psm1.png" alt="PSM I (Scrum.org)" class="w-24 h-24 object-contain" />
+    <img src="imagens/badges/aws1.png" alt="AWS Certified Cloud Practitioner" class="w-24 h-24 object-contain" />
+    <!-- 
+    <img src="imagens/badges/aws2.png" alt="AWS Certified Solutions Architect - Associate" class="w-24 h-24 object-contain" />
+    <img src="imagens/badges/aws3.png" alt="Aw" class="w-24 h-24 object-contain" />
+    -->
+  </div>
+  <!-- Botão de voltar -->
+  <button onclick="voltarDosBadges()"
+          class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
+    Voltar
+  </button>
+</div>
+
   <!-- Link para o arquivo JS customizado -->
   <script src="script.js"></script>
 </body>
