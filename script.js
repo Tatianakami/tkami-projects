@@ -105,7 +105,7 @@ pageProjects.forEach(proj => {
   
   projectDiv.innerHTML = `
     <h3 class="font-semibold text-sm">${proj.title}</h3>
-    <p class="text-xs text-gray-600">${proj.description}</p>
+    <p class="text-xs text-gray-600 text-left">${proj.description}</p>
     <div class="mt-2 flex gap-1">
       ${buttonsHtml}
     </div>

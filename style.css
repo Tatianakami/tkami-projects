@@ -138,32 +138,33 @@ body {
     object-fit: contain;
 }
 
-/* Media Query para dispositivos móveis */
 @media (max-width: 640px) {
-  /* Ajusta o container de Projetos para ficar similar aos Badges,
-     com um pouco mais de altura se necessário */
-  #projectsScreen,
-  #projectsScreen.active {
-    width: 95%;
-    min-height: 580px;
-    padding: 1rem;
-  }
-
-  /* Garante que os parágrafos dos mini cards fiquem à esquerda, mesmo em mobile */
-  .project-card p {
-    text-align: left !important;
+    /* Ajusta o container de Projetos para ficar similar aos Badges,
+       com um pouco mais de altura se necessário */
+    #projectsScreen,
+    #projectsScreen.active {
+      width: 95%;
+      min-height: 580px;
+      padding: 1rem;
+    }
+    
+    /* Badges permanece com 90% da largura e min-height ajustado */
+    #badgesScreen,
+    #badgesScreen.active {
+      width: 90%;
+      min-height: 400px;
+      padding: 1rem;
+    }
+    
+    /* Centraliza a tipografia globalmente */
+    h1, h2, p {
+      text-align: center;
+    }
+    
+    /* Depois, sobrepõe apenas para os parágrafos dentro de .project-card */
+    #projectsScreen .project-card p {
+      text-align: left !important;
+    }
   }
   
-  /* Badges permanece com 90% da largura e min-height ajustado */
-  #badgesScreen,
-  #badgesScreen.active {
-    width: 90%;
-    min-height: 400px;
-    padding: 1rem;
-  }
   
-  /* Centraliza a tipografia */
-  h1, h2, p {
-    text-align: center;
-  }
-}
