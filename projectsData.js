@@ -10,7 +10,7 @@ const projectsData = {
     ],
     Python: [
       { title: "Exercícios Python ", 
-        tags: ["Data Science"], 
+        tags: [""], 
         description: "Exercícios e desafios do curso do André Iacono", 
         site: "", 
         repo: "https://github.com/eduardolentz/python-udemy-andreiacono", 
