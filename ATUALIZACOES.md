@@ -1,5 +1,11 @@
 # 🚀 Atualizações
 
+### [📅 2025-02-20] - Atualizações de Responsividade e Organização
+
+- Otimização do layout da Tela de Projetos para melhor adaptação em dispositivos móveis e desktops.
+- Ajuste no grid e paginação para exibição adequada dos mini cards em diferentes resoluções.
+- Modularização dos dados dos projetos com a criação do arquivo `projectsData.js` para facilitar futuras atualizações.
+
 ### [📅 2025-02-19] - Adicionando tele
 - Adicionei mais um tela para badges de certificações 
 

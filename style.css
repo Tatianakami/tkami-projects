@@ -3,22 +3,23 @@ h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
     color: rgb(4, 49, 7);
-  }
+}
 
 h2 {
-    font-family: 'Inter', sans-serif;;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: rgb(4, 49, 7);
-  }
-  
-  p {
+}
+
+p {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-  }
-  
+}
+
 body {
   background: #a4a49b;
 }
+
 /* Container de flip para Telas 1 e 2 */
 .flip-container {
     perspective: 1000px;
@@ -26,7 +27,7 @@ body {
     max-width: 400px;
     position: relative;
 }
-  
+
 .flipper {
     transition: transform 0.6s;
     transform-style: preserve-3d;
@@ -35,11 +36,11 @@ body {
     height: 100%;
     min-height: 500px;
 }
-  
+
 .flipped {
     transform: rotateY(180deg);
 }
-  
+
 .front,
 .back {
     backface-visibility: hidden;
@@ -57,12 +58,12 @@ body {
     border-radius: 1rem;
     background: rgb(235, 232, 232);
 }
-  
+
 .back {
     transform: rotateY(180deg);
 }
-  
-/* Tela 3: Projetos – container com altura um pouco menor e layout flex */
+
+/* Tela de Projetos */
 #projectsScreen {
     position: absolute;
     top: 50%;
@@ -73,23 +74,28 @@ body {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     z-index: 50;
-    width: 600px;       /* Container mais largo */
-    min-height: 520px;  /* Altura inicial um pouco menor */
+    width: 600px;
+    min-height: 520px;
     opacity: 0;
     pointer-events: none;
     transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
 }
-  
+
 #projectsScreen.active {
     opacity: 1;
-    width: 650px;       /* Leve expansão horizontal */
-    min-height: 570px;  /* Leve expansão vertical */
+    width: 650px;
+    min-height: 570px;
     pointer-events: auto;
 }
-  
-/* Tela de Badges - Separada do flip */
+
+/* Garantir que os textos dos mini cards fiquem alinhados à esquerda */
+.project-card p {
+    text-align: left !important;
+  }
+
+/* Tela de Badges */
 #badgesScreen {
     position: absolute;
     top: 50%;
@@ -110,7 +116,7 @@ body {
     align-items: center;
 }
 
-#badgesScreen img:hover{
+#badgesScreen img:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
@@ -121,13 +127,38 @@ body {
 }
 
 .badges-container {
-      display: flex;
-      justify-content: center;
-      gap: 2rem; /* Ajuste o espaçamento entre as imagens */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
-    
+
 .badges-container img {
-      width: 85px;  /* ou outro valor */
-      height: 85px;
-      object-fit: contain;
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 640px) {
+  /* Ajusta o container de Projetos para ficar similar aos Badges,
+     com um pouco mais de altura se necessário */
+  #projectsScreen,
+  #projectsScreen.active {
+    width: 95%;
+    min-height: 580px;
+    padding: 1rem;
+  }
+  
+  /* Badges permanece com 90% da largura e min-height ajustado */
+  #badgesScreen,
+  #badgesScreen.active {
+    width: 90%;
+    min-height: 400px;
+    padding: 1rem;
+  }
+  
+  /* Centraliza a tipografia */
+  h1, h2, p {
+    text-align: center;
+  }
 }
