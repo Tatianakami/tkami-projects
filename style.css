@@ -148,6 +148,11 @@ body {
     min-height: 580px;
     padding: 1rem;
   }
+
+  /* Garante que os parágrafos dos mini cards fiquem à esquerda, mesmo em mobile */
+  .project-card p {
+    text-align: left !important;
+  }
   
   /* Badges permanece com 90% da largura e min-height ajustado */
   #badgesScreen,
