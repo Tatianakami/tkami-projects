@@ -91,7 +91,7 @@ pageProjects.forEach(proj => {
   
   let buttonsHtml = "";
   if (proj.site) {
-    buttonsHtml += `<a href="${proj.site}" target="_blank" class="border border-yellow-600 text-yellow-600 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-yellow-600 hover:text-white">Front</a>`;
+    buttonsHtml += `<a href="${proj.site}" target="_blank" class="border border-yellow-600 text-yellow-600 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-yellow-600 hover:text-white">Interface</a>`;
   }
   if (proj.repo) {
     buttonsHtml += `<a href="${proj.repo}" target="_blank" class="border border-purple-900 text-purple-900 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-purple-900 hover:text-white">Repositório</a>`;
