@@ -1,5 +1,11 @@
 # 🚀 Atualizações
 
+### [📅 22-02-2025] - Novas Atualizações de Hoje
+
+- Refatoração da Tela dois, de Tecnologias: Layout com duas colunas para a inclusão de novas tecnologias.
+- Integração do GitHub Actions: Configuração de automação para o processo de deploy do site.
+
+
 ### [📅 20-02-2025] - Atualizações de Responsividade e Organização
 
 - Otimização do layout da Tela de Projetos para melhor adaptação em dispositivos móveis e desktops.

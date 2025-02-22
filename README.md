@@ -1,11 +1,14 @@
  
 # 🚀 Landing Page - Currículo Interativo
 
-Este é um projeto de landing page interativa para apresentação de um currículo. Ele conta com um efeito de **flip card**, permitindo que os visitantes alternem entre as informações pessoais e os projetos do desenvolvedor.
+Este é um projeto de landing page interativa para apresentação de um currículo. Ele conta com um efeito de **flip card**, permitindo que os visitantes alternem entre as informações pessoais e os projetos do desenvolvedor. As atualizações desse projeto podem ser vistas no documento [ATUALIZACOES.md](https://github.com/eduardolentz/website-eduardolentz/blob/main/ATUALIZACOES.md).
 
 ## Estrutura do Projeto
 ```
-Website-Eduardo Lentz/
+/website-eduardolentz/
+├── .github/
+|    ├── workflows/
+|    |    ├── deploy.yml
 ├── index.html # Estrutura principal do site
 ├── styles.css
 ├── scripts.js
@@ -34,6 +37,7 @@ Website-Eduardo Lentz/
 - **CSS3 (Tailwind CSS)** - Estilização moderna e responsiva.
 - **JavaScript** - Implementação do efeito de virar o cartão.
 - **AWS S3** - O projeto será hospedado como um site estático na AWS.
+- **GitHub Actions** – Automação do deploy.
 
 ## 🌍 Hospedagem
 

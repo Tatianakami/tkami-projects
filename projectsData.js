@@ -14,7 +14,7 @@ const projectsData = {
         description: "Em construção", 
         site: "", 
         repo: "", 
-        article:"" },
+        article:"https://medium.com/@eduardolentz/como-automatizei-o-deploy-do-meu-site-est%C3%A1tico-na-aws-s3-com-github-actions-03417f871227" },
     ],
     Python: [
       { title: "Exercícios Python ", 
