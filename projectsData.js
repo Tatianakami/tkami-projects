@@ -23,6 +23,12 @@ const projectsData = {
         site: "", 
         repo: "https://github.com/eduardolentz/python-udemy-andreiacono", 
         article:"" },
+      { title: "Projeto API Python ", 
+        tags: ["FastAPI","Docker"], 
+        description: "API em Python com PostgreSQL e Docker.", 
+        site: "", 
+        repo: "https://github.com/eduardolentz/API-python-biblioteca", 
+        article:"" },  
     ],
     JavaScript: [
       { title: "Projeto API Node.js", 
