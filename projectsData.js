@@ -34,10 +34,10 @@ const projectsData = {
     ],
     dotnet: [
       { title: "Projeto API .NET", 
-        tags: [".NET"], 
-        description: "Em construção", 
+        tags: [".NET",], 
+        description: "API em .NET 8 com PostgreSQL e Docker.", 
         site: "", 
-        repo: "", 
+        repo: "https://github.com/eduardolentz/API-dotnet-biblioteca", 
         article:"" },
     ],  
     Java: [
