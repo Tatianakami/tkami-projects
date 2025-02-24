@@ -33,9 +33,9 @@ const projectsData = {
     JavaScript: [
       { title: "Projeto API Node.js", 
         tags: ["Node.js"], 
-        description: "Em construção", 
+        description: "API em Node com PostgreSQL e teste", 
         site: "", 
-        repo: "", 
+        repo: "https://github.com/eduardolentz/API-node-biblioteca", 
         article:"" },
     ],
     dotnet: [
