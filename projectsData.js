@@ -82,10 +82,10 @@ const projectsData = {
     Artigos: [
       { title: "Preparação AWS Cloud Practitioner", 
         tags: ["Certificações"], 
-        description: "Em construção", 
+        description: "Minha prepração para a certificação", 
         site: "", 
         repo: "", 
-        article:"" },
+        article:"https://medium.com/@eduardolentz/como-me-preparei-para-a-certifica%C3%A7%C3%A3o-aws-cloud-practitioner-e425c43eeec9" },
       { title: "Desafio três APIs, 3 linguagens. V.1", 
         tags: ["Projetos"], 
         description: "APIs em .Net, Python, Node.js", 
