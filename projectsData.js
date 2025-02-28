@@ -13,6 +13,12 @@ const projectsData = {
         site: "", 
         repo: "https://github.com/eduardolentz/usando-awssdk-python-boto3", 
         article:"https://medium.com/@eduardolentz/usando-aws-cli-e-aws-sdk-python-boto3-listando-buckets-do-amazon-s3-ee2b56a672b1" },
+      { title: "Automações usando AWS Lambda", 
+        tags: ["AWS"], 
+        description: "Automações usando AWS Lambda e Python", 
+        site: "", 
+        repo: "https://github.com/eduardolentz/automacoes-aws-andreiacono-udemy", 
+        article:"" },
     ],
     DevOps: [
       { title: "Projeto CI/CD GitHub Actions", 
