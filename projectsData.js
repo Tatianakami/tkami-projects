@@ -7,6 +7,12 @@ const projectsData = {
         site: "", 
         repo: "", 
         article:"https://medium.com/@eduardolentz/como-hospedei-minha-landing-page-profissional-na-aws-s3-um-guia-passo-a-passo-fc33b9ebc454" },
+      { title: "Usando AWS CLI e AWS SDK", 
+        tags: ["AWS"], 
+        description: "Listando buckets S3 com CLI e SDK", 
+        site: "", 
+        repo: "https://github.com/eduardolentz/usando-awssdk-python-boto3", 
+        article:"https://medium.com/@eduardolentz/usando-aws-cli-e-aws-sdk-python-boto3-listando-buckets-do-amazon-s3-ee2b56a672b1" },
     ],
     DevOps: [
       { title: "Projeto CI/CD GitHub Actions", 
