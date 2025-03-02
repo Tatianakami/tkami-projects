@@ -18,7 +18,7 @@ const projectsData = {
         description: "Automações usando AWS Lambda e Python", 
         site: "", 
         repo: "https://github.com/eduardolentz/automacoes-aws-andreiacono-udemy", 
-        article:"" },
+        article:"https://medium.com/@eduardolentz/automa%C3%A7%C3%A3o-na-aws-com-lambda-cinco-projetos-pr%C3%A1ticos-2137e7b8dfbc" },
     ],
     DevOps: [
       { title: "Projeto CI/CD GitHub Actions", 
