@@ -1,6 +1,11 @@
 # 🚀 Atualizações
 
-### [📅 22-02-2025] - Novas Atualizações de Hoje
+### [📅 16-03-2025] - Adicionei botão Credly
+
+- Adicinei um botão de tela de badges para levar para o meu perfil no Credly
+
+
+### [📅 22-02-2025] - Atualizações no deploy
 
 - Refatoração da Tela dois, de Tecnologias: Layout com duas colunas para a inclusão de novas tecnologias.
 - Integração do GitHub Actions: Configuração de automação para o processo de deploy do site.
