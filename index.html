@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="imagens/icone.png">
-  <title>Eduardo O. Lentz</title>
+  <title>Eduardo O. Lentz</title>  
+  <!-- Carrega o Tailwind primeiro -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Link para o arquivo CSS customizado -->
   <link rel="stylesheet" href="style.css" />
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4 relative">
-  <!-- Container do flip: Telas 1 (Perfil) e 2 (Tecnologias) -->
+  <!-- Container do Flip: Telas 1 (Perfil) e 2 (Tecnologias) -->
   <div id="flipContainer" class="flip-container">
     <div id="card" class="flipper">
       <!-- Tela 1: Perfil -->
@@ -24,7 +24,7 @@
         <div class="mt-4">
           <p id="local">📍 Torres, Rio Grande do Sul, Brasil</p>
         </div>
-        <!-- Área de redes sociais -->
+        <!-- Redes Sociais -->
         <div class="flex justify-center gap-4 mt-8">
           <a href="https://wa.me/5551992131010" target="_blank">
             <img src="imagens/whatsapp.png" alt="WhatsApp" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
@@ -48,7 +48,7 @@
             <img src="imagens/email.png" alt="E-mail" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
           </a>
         </div>
-        <!-- Botões: Baixar Currículo e Projetos -->
+        <!-- Botões: Badges, Currículo, Projetos -->
         <div class="mt-8 flex flex-wrap justify-center gap-4">
           <button onclick="showBadges()"
             class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">
@@ -64,103 +64,105 @@
           </button>
         </div>
       </div>
-      <!-- Tela 2: Tecnologias -->
+      
+      <!-- Tela 2: Tecnologias (lado de trás) -->
       <div class="back">
         <h2 class="text-2xl font-bold">Tecnologia</h2>
         <div class="mt-4 grid grid-cols-2 gap-3">
-          <button onclick="showProjects('Cloud')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            ☁ Cloud
+          <button onclick="showProjects('Cloud')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
+            <img src="https://img.icons8.com/pulsar-color/48/cloud.png" class="w-5 h-5" alt="Cloud">Cloud
           </button>
-          <button onclick="showProjects('DevOps')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            ⚙ DevOps
+          <button onclick="showProjects('DevOps')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
+            <img src="https://img.icons8.com/pulsar-color/48/settings.png" class="w-5 h-5" alt="DevOps">DevOps
           </button>
-          <button onclick="showProjects('Python')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            🐍 Python
+          <button onclick="showProjects('Python')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
+            <img src="https://img.icons8.com/pulsar-color/48/python.png" class="w-5 h-5" alt="Python">Python
           </button>
-          <button onclick="showProjects('JavaScript')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            🟡 JavaScript
+          <button onclick="showProjects('JavaScript')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
+            <img src="https://img.icons8.com/pulsar-color/48/javascript.png" class="w-5 h-5" alt="JavaScript">JavaScript
           </button>
-          <button onclick="showProjects('dotnet')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            🔵 .NET
+          <button onclick="showProjects('Dados')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
+            <img src="https://img.icons8.com/pulsar-color/48/database.png" class="w-5 h-5" alt="Dados">Dados
           </button>
-          <button onclick="showProjects('Java')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            ☕ Java
+          <button onclick="showProjects('QA')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
+            <img src="https://img.icons8.com/pulsar-color/48/window-bug.png" class="w-5 h-5" alt="QA">QA
           </button>
-          <button onclick="showProjects('Dados')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            🎲 Dados
+          <button onclick="showProjects('CS')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
+            <img src="https://img.icons8.com/pulsar-color/48/cs.png" class="w-5 h-5" alt="C#">C#
           </button>
-          <button onclick="showProjects('FrontEnd')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            💻 Front-end
+          <button onclick="showProjects('FrontEnd')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
+            <img src="https://img.icons8.com/pulsar-color/48/monitor.png" class="w-5 h-5" alt="Front-end">Front-end
           </button>
-          <button onclick="showProjects('Outros')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            ⁉ Outros
+          <button onclick="showProjects('Outros')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
+            <img src="https://img.icons8.com/pulsar-color/48/more.png" class="w-5 h-5" alt="Outros">Outros
           </button>
-          <button onclick="showProjects('Artigos')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-            📃 Artigos
+          <button onclick="showProjects('Artigos')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
+            <img src="https://img.icons8.com/pulsar-color/48/documents.png" class="w-5 h-5" alt="Artigos">Artigos
           </button>
         </div>
-        
+        <!-- Botão para voltar (flip back) com seta -->
         <button onclick="flipCardToProfile()"
-          class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
-          Voltar
+          class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white flex items-center gap-2">
+          <img src="https://img.icons8.com/pulsar-color/48/return.png" class="w-4 h-4" alt="Voltar"> Voltar
         </button>
       </div>
     </div>
   </div>
-  <!-- Tela 3: Projetos -->
-  <div id="projectsScreen" class="fixed inset-0 flex flex-col items-center justify-start bg-gray-200 p-6 opacity-0 pointer-events-none transition-all duration-400">
+  
+  <!-- Tela de Projetos (fora do flip) -->
+  <div id="projectsScreen">
     <h2 class="text-2xl font-bold mb-4 text-center">
       Projetos em <span id="techTitle"></span>
     </h2>
     <!-- Barra de filtro -->
-    <div id="filterBar" class="mb-4 hidden"></div>
-    <!-- Alterado para grid de 1 coluna em mobile e 2 colunas em desktop -->
+    <div id="filterBar"></div>
+    <!-- Grid para os projetos -->
     <div id="projectsContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full"></div>
     <div class="w-full flex flex-wrap justify-between items-center mt-auto">
       <div class="flex gap-4">
         <button onclick="hideProjects()"
-          class="border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
-          Voltar
+          class="border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white flex items-center gap-2">
+          <img src="https://img.icons8.com/pulsar-color/48/return.png" class="w-5 h-5" alt="Voltar"> Voltar
         </button>
         <button onclick="goHome()"
-          class="border border-green-800 text-green-800 px-4 py-2 rounded-full shadow-md transition hover:bg-green-800 hover:text-white">
-          Perfil
+          class="border border-green-800 text-green-800 px-4 py-2 rounded-full shadow-md transition hover:bg-green-800 hover:text-white flex items-center gap-2">
+          <img src="https://img.icons8.com/material-outlined/24/000000/user.png" class="w-4 h-4" alt="Perfil"> Perfil
         </button>
       </div>
       <div id="paginationControls" class="flex gap-2 items-center">
         <button id="prevPage" onclick="prevPage()" class="border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-          &#129092;
+          <img src="https://img.icons8.com/pulsar-color/48/back.png" class="w-4 h-4" alt="Anterior">
         </button>
         <span id="pageIndicator" class="text-gray-600"></span>
         <button id="nextPage" onclick="nextPage()" class="border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-          &#129094;
+          <img src="https://img.icons8.com/pulsar-color/48/forward.png" class="w-4 h-4" alt="Próximo">
         </button>
       </div>
     </div>
   </div>
-  <!-- Tela de Badges -->
-  <div id="badgesScreen" class="flex flex-col items-center p-6" style="height: 500px;">
+  
+  <!-- Tela de Badges (fora do flip) -->
+  <div id="badgesScreen">
     <h2 class="text-2xl font-bold text-center mb-4">Badges</h2>
     <div class="flex justify-center gap-4">
-      <img src="imagens/badges/aws1.png" alt="AWS Certified Cloud Practitioner" class="w-28 h-28 object-contain" />
-      <img src="imagens/badges/psm1.png" alt="PSM I (Scrum.org)" class="w-24 h-24 object-contain" />
-      <img src="imagens/badges/pmi.png" alt="PMI Member" class="w-24 h-24 object-contain" />
+      <img src="imagens/badges/aws1.png" alt="AWS Certified Cloud Practitioner" class="badge-wave w-28 h-28 object-contain" />
+      <img src="imagens/badges/psm1.png" alt="PSM I (Scrum.org)" class="badge-wave w-24 h-24 object-contain" />
+      <img src="imagens/badges/pmi.png" alt="PMI Member" class="badge-wave w-24 h-24 object-contain" />
     </div>
     <div class="mt-auto flex gap-4">
       <a href="https://www.credly.com/users/eduardolentz" target="_blank"
-         class="border border-orange-600 text-orange-600 px-4 py-2 rounded-full shadow-md transition hover:bg-orange-600 hover:text-white">
-         Credly
+         class="border border-orange-600 text-orange-600 px-4 py-2 rounded-full shadow-md transition hover:bg-orange-600 hover:text-white flex items-center gap-2">
+         <img src="https://img.icons8.com/pulsar-color/48/warranty.png" class="w-4 h-4" alt="Credly"> Credly
       </a>
       <button onclick="voltarDosBadges()"
-        class="border border-red-500 text-red-00 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white">
-        Voltar
+        class="border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white flex items-center gap-2">
+        <img src="https://img.icons8.com/pulsar-color/48/return.png" class="w-4 h-4" alt="Voltar"> Voltar
       </button>
     </div>
   </div>
-
-  <!-- Arquivo com os dados dos projetos -->
+  
+  <!-- Scripts -->
   <script src="projectsData.js"></script>
-  <!-- Link para o arquivo JS customizado -->
   <script src="script.js"></script>
 </body>
 </html>

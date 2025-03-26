@@ -1,5 +1,10 @@
 # 🚀 Atualizações
 
+### [📅 25-03-2025] - Adicionei botão Credly
+
+- Alterei os icones dos botões para icones do Icon8
+- Criei efeito onda nos badges
+
 ### [📅 16-03-2025] - Adicionei botão Credly
 
 - Adicinei um botão de tela de badges para levar para o meu perfil no Credly
