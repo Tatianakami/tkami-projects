@@ -111,7 +111,7 @@ function renderPagination() {
   const pageIndicator = document.getElementById("pageIndicator");
   if (totalPages > 1) {
     paginationControls.classList.remove("hidden");
-    pageIndicator.innerText = `Página ${currentPage} de ${totalPages}`;
+    pageIndicator.innerText = `Pag ${currentPage} de ${totalPages}`;
     document.getElementById("prevPage").disabled = (currentPage === 1);
     document.getElementById("nextPage").disabled = (currentPage === totalPages);
   } else {

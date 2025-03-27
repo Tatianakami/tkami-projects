@@ -1,185 +1,184 @@
 /* Fontes */
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-    color: rgb(4, 49, 7);
-  }
-  
-  h2 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    color: rgb(4, 49, 7);
-  }
-  
-  p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-  }
-  
-  body {
-    background: #a4a49b;
-  }
-  
-  /* Container de flip para Telas 1 e 2 */
-  .flip-container {
-    perspective: 1000px;
-    width: 100%;
-    max-width: 400px;
-    position: relative;
-    margin: auto;
-    /* overflow: hidden; caso seja necessário */
-  }
-  
-  .flipper {
-    transition: transform 0.6s ease;
-    transform-style: preserve-3d;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 500px;
-    transform-origin: center center;
-  }
-  
-  .flipped {
-    transform: rotateY(180deg);
-  }
-  
-  /* Faces do Card */
-  .front,
-  .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 1rem;
-    background: rgb(235, 232, 232);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    box-sizing: border-box;
-  }
-  
-  .back {
-    transform: rotateY(180deg);
-  }
-  
-  /* Tela de Projetos */
-  #projectsScreen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgb(235, 232, 232);
-    border-radius: 1rem;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    z-index: 50;
-    width: 600px;
-    min-height: 520px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s ease;
-    display: flex;
-    flex-direction: column;
-  }
-  
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  color: rgb(4, 49, 7);
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: rgb(4, 49, 7);
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background: #a4a49b;
+}
+
+/* Container de flip para Telas 1 e 2 */
+.flip-container {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+  /* overflow: hidden; caso seja necessário */
+}
+
+.flipper {
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  transform-origin: center center;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Faces do Card */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 1rem;
+  background: rgb(235, 232, 232);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* Tela de Projetos */
+#projectsScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(235, 232, 232);
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 50;
+  width: 600px;
+  min-height: 520px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+#projectsScreen.active {
+  opacity: 1;
+  width: 650px;
+  min-height: 570px;
+  pointer-events: auto;
+}
+
+/* Tela de Badges */
+#badgesScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(235,232,232);
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  padding: 1rem;
+  z-index: 100;
+  width: 600px;
+  min-height: 520px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#badgesScreen.active {
+  opacity: 1;
+  width: 650px;
+  min-height: 570px;
+  pointer-events: auto;
+}
+
+/* Container de Filtro (Centralizado) */
+#filterBar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Animação de Onda para Badges */
+@keyframes wave {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+#badgesScreen.active .badge-wave {
+  animation: wave 1s ease-in-out forwards;
+}
+
+/* Delays Diferentes para cada Badge */
+#badgesScreen.active img:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+#badgesScreen.active img:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+#badgesScreen.active img:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Hover para Badges */
+#badgesScreen img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+  #projectsScreen,
   #projectsScreen.active {
-    opacity: 1;
-    width: 650px;
-    min-height: 570px;
-    pointer-events: auto;
-  }
-  
-  /* Tela de Badges */
-  #badgesScreen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgb(235,232,232);
-    border-radius: 1rem;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    width: 95%;
+    min-height: 580px;
     padding: 1rem;
-    z-index: 100;
-    width: 600px;
-    min-height: 520px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   
+  #badgesScreen,
   #badgesScreen.active {
-    opacity: 1;
-    width: 650px;
-    min-height: 570px;
-    pointer-events: auto;
+    width: 95%;
+    min-height: 580px;
+    padding: 1rem;
   }
   
-  /* Container de Filtro (Centralizado) */
-  #filterBar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+  h1, h2, p {
+    text-align: center;
   }
-  
-  /* Animação de Onda para Badges */
-  @keyframes wave {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-  }
-  
-  #badgesScreen.active .badge-wave {
-    animation: wave 1s ease-in-out forwards;
-  }
-  
-  /* Delays Diferentes para cada Badge */
-  #badgesScreen.active img:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  
-  #badgesScreen.active img:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  
-  #badgesScreen.active img:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  
-  /* Hover para Badges */
-  #badgesScreen img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 640px) {
-    #projectsScreen,
-    #projectsScreen.active {
-      width: 95%;
-      min-height: 580px;
-      padding: 1rem;
-    }
-    
-    #badgesScreen,
-    #badgesScreen.active {
-      width: 90%;
-      min-height: 400px;
-      padding: 1rem;
-    }
-    
-    h1, h2, p {
-      text-align: center;
-    }
-  }
-  
+}
