@@ -16,8 +16,41 @@ p {
   font-weight: 300;
 }
 
+/*
+  Fundo com cor base chumbo (#343a40) e
+  dois radial-gradients:
+    1. Verde (#32CD32) na parte inferior esquerda
+    2. Roxo (#8A2BE2) na parte superior direita
+  Usando 'screen' para mesclar as manchas sobre o chumbo.
+*/
 body {
-  background: #a4a49b;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #3c3e41; /* chumbo */
+
+  background-image:
+    /* (inferior esquerda) */
+    radial-gradient(
+      circle at 20% 80%, 
+      rgba(13, 95, 13, 0.582) 0%, 
+      transparent 50%
+    ),
+    /* (centro-direita) */
+    radial-gradient(
+      circle at 70% 50%, 
+      rgba(241, 118, 2, 0.4) 0%, 
+      transparent 80%
+    ),
+    /* (superior direita) */
+    radial-gradient(
+      circle at 80% 20%, 
+      rgba(21, 179, 171, 0.438) 0%, 
+      transparent 40%
+    );
+
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Container de flip para Telas 1 e 2 */

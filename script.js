@@ -13,6 +13,7 @@ let currentFilter = "";
 let currentPage = 1;
 
 function getProjectsPerPage() {
+  // 3 projetos por página em telas pequenas (<= 640px), 6 em telas maiores
   return window.innerWidth <= 640 ? 3 : 6;
 }
 
@@ -49,16 +50,29 @@ function renderFilterBar(tech) {
   const tags = Array.from(tagsSet);
   if (tags.length > 0) {
     filterBar.classList.remove("hidden");
+    // Botão "All"
     const btnAll = document.createElement("button");
     btnAll.innerText = "All";
     btnAll.className = "border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white mr-2";
-    btnAll.onclick = () => { currentFilter = ""; currentPage = 1; renderProjects(); renderPagination(); };
+    btnAll.onclick = () => {
+      currentFilter = "";
+      currentPage = 1;
+      renderProjects();
+      renderPagination();
+    };
     filterBar.appendChild(btnAll);
+
+    // Botões de cada tag
     tags.forEach(tag => {
       const btn = document.createElement("button");
       btn.innerText = tag;
       btn.className = "border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white mr-2";
-      btn.onclick = () => { currentFilter = tag; currentPage = 1; renderProjects(); renderPagination(); };
+      btn.onclick = () => {
+        currentFilter = tag;
+        currentPage = 1;
+        renderProjects();
+        renderPagination();
+      };
       filterBar.appendChild(btn);
     });
   } else {
@@ -70,12 +84,20 @@ function renderProjects() {
   const container = document.getElementById("projectsContainer");
   container.innerHTML = "";
   const projects = projectsData[currentTech] || [];
-  const filteredProjects = currentFilter ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter)) : projects;
+  // Filtra se há uma tag ativa
+  const filteredProjects = currentFilter
+    ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter))
+    : projects;
+  
+  // Paginação
   const startIndex = (currentPage - 1) * getProjectsPerPage();
   const pageProjects = filteredProjects.slice(startIndex, startIndex + getProjectsPerPage());
+  
+  // Monta cada card de projeto
   pageProjects.forEach(proj => {
     const projectDiv = document.createElement("div");
     projectDiv.className = "bg-gray-100 p-3 rounded-lg shadow";
+    
     let buttonsHtml = "";
     if (proj.site) {
       buttonsHtml += `<a href="${proj.site}" target="_blank" class="border border-yellow-600 text-yellow-600 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-yellow-600 hover:text-white">Interface</a>`;
@@ -89,6 +111,7 @@ function renderProjects() {
     if (proj.doc) {
       buttonsHtml += `<a href="${proj.doc}" target="_blank" class="border border-blue-800 text-blue-800 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-800 hover:text-white">Documentação</a>`;
     }
+    
     projectDiv.innerHTML = `
       <h3 class="font-semibold text-sm">${proj.title}</h3>
       <p class="text-xs text-gray-600 text-left">${proj.description}</p>
@@ -96,22 +119,30 @@ function renderProjects() {
         ${buttonsHtml}
       </div>
     `;
+    
+    // Evita que o clique em um link feche o card ou interfira em algo
     projectDiv.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", e => e.stopPropagation());
     });
+    
     container.appendChild(projectDiv);
   });
 }
 
 function renderPagination() {
   const projects = projectsData[currentTech] || [];
-  const filtered = currentFilter ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter)) : projects;
+  // Filtra se há uma tag ativa
+  const filtered = currentFilter
+    ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter))
+    : projects;
+  
   const totalPages = Math.ceil(filtered.length / getProjectsPerPage());
   const paginationControls = document.getElementById("paginationControls");
   const pageIndicator = document.getElementById("pageIndicator");
+  
   if (totalPages > 1) {
     paginationControls.classList.remove("hidden");
-    pageIndicator.innerText = `Pag ${currentPage} de ${totalPages}`;
+    pageIndicator.innerText = `Página ${currentPage} de ${totalPages}`;
     document.getElementById("prevPage").disabled = (currentPage === 1);
     document.getElementById("nextPage").disabled = (currentPage === totalPages);
   } else {
@@ -122,7 +153,11 @@ function renderPagination() {
 
 function nextPage() {
   const projects = projectsData[currentTech] || [];
-  const filtered = currentFilter ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter)) : projects;
+  // Filtra se há uma tag ativa
+  const filtered = currentFilter
+    ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter))
+    : projects;
+  
   const totalPages = Math.ceil(filtered.length / getProjectsPerPage());
   if (currentPage < totalPages) {
     currentPage++;

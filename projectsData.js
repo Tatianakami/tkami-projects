@@ -36,24 +36,8 @@ const projectsData = {
     {
       title: "Adicionando SSL com ACM",
       tags: ["AWS"],
-      description: "Protocolo de segurança para o meu protfólio",
-      site: "",
-      repo: "https://github.com/eduardolentz/usando-awssdk-python-boto3",
-      article: "https://medium.com/@eduardolentz/usando-aws-cli-e-aws-sdk-python-boto3-listando-buckets-do-amazon-s3-ee2b56a672b1"
-    },
-    {
-      title: "Usando AWS CLI e AWS SDK",
-      tags: ["AWS"],
-      description: "Listando buckets S3 com CLI e SDK",
-      site: "",
-      repo: "https://github.com/eduardolentz/usando-awssdk-python-boto3",
-      article: "https://medium.com/@eduardolentz/usando-aws-cli-e-aws-sdk-python-boto3-listando-buckets-do-amazon-s3-ee2b56a672b1"
-    },
-    {
-      title: "Usando AWS CLI e AWS SDK",
-      tags: ["AWS"],
-      description: "Listando buckets S3 com CLI e SDK",
-      site: "",
+      description: "Protocolo de segurança para o meu portfólio",
+      site: "https://www.eduardolentz.com.br",
       repo: "https://github.com/eduardolentz/usando-awssdk-python-boto3",
       article: "https://medium.com/@eduardolentz/usando-aws-cli-e-aws-sdk-python-boto3-listando-buckets-do-amazon-s3-ee2b56a672b1"
     },
