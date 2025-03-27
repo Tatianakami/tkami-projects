@@ -37,9 +37,9 @@ const projectsData = {
       title: "Adicionando SSL com ACM",
       tags: ["AWS"],
       description: "Protocolo de segurança para o meu portfólio",
-      site: "https://www.eduardolentz.com.br",
+      site: "",
       repo: "https://github.com/eduardolentz/usando-awssdk-python-boto3",
-      article: "https://medium.com/@eduardolentz/usando-aws-cli-e-aws-sdk-python-boto3-listando-buckets-do-amazon-s3-ee2b56a672b1"
+      article: "https://medium.com/@eduardolentz/como-adicionei-um-certificado-ssl-ao-meu-site-https-d17dfc2157b4"
     },
   ],
   DevOps: [
@@ -115,7 +115,7 @@ const projectsData = {
       title: "Web site portifólio",
       tags: ["html+css+js"],
       description: "Landing page interativa para apresentar meu currículo e projetos",
-      site: "",
+      site: "https://www.eduardolentz.com.br",
       repo: "https://github.com/eduardolentz/website-eduardolentz",
       article: "",
       doc: ""
