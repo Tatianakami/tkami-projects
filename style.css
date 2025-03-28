@@ -16,17 +16,10 @@ p {
   font-weight: 300;
 }
 
-/*
-  Fundo com cor base chumbo (#343a40) e
-  dois radial-gradients:
-    1. Verde (#32CD32) na parte inferior esquerda
-    2. Roxo (#8A2BE2) na parte superior direita
-  Usando 'screen' para mesclar as manchas sobre o chumbo.
-*/
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #3c3e41; /* chumbo */
+  background-color: #3c3e41; 
 
   background-image:
     /* (inferior esquerda) */
