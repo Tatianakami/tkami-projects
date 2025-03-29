@@ -85,6 +85,5 @@ Caso queira hospedar um site estático na AWS S3, siga os passos:
 Este projeto está sob a licença MIT. Sinta-se à vontade para utilizá-lo e modificá-lo como desejar.
 
 ---
-
-Feito por [Eduardo Lentz](https://github.com/eduardolentz).
-
+### Eduardo O. Lentz
+💻 Portfolio | 🔗 LinkedIn | 📂 GitHub | 📝 Medium | 📸 Instagram
