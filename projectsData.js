@@ -45,11 +45,19 @@ const projectsData = {
   DevOps: [
     {
       title: "Projeto CI/CD GitHub Actions",
-      tags: ["CI/CD", "AWS"],
+      tags: ["CI/CD", "AWS", "GitHub Actions"],
       description: "Em construção",
       site: "",
       repo: "",
       article: "https://medium.com/@eduardolentz/como-automatizei-o-deploy-do-meu-site-est%C3%A1tico-na-aws-s3-com-github-actions-03417f871227"
+    },
+    {
+      title: "Do Shell ao Docker",
+      tags: ["Linux", "Docker"],
+      description: "3 Projetos de Linux com IaC.",
+      site: "",
+      repo: "",
+      article: "https://medium.com/@eduardolentz/do-shell-ao-docker-3-projetos-pr%C3%A1ticos-de-linux-com-iac-no-bootcamp-santander-da-dio-40ea8e2c6305"
     },
   ],
   Python: [
