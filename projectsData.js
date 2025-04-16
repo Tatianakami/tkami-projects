@@ -129,22 +129,26 @@ const projectsData = {
       doc: ""
     },
   ],
-  Outros: [
+  WordPress: [
     {
-      title: "Projeto API Go",
-      tags: ["Go"],
+      title: "E-comerce",
+      tags: ["WooCommerce"],
       description: "Em construção",
       site: "",
       repo: "",
-      article: ""
+      article: "",
+      doc: ""
     },
+  ],
+  PHP: [
     {
-      title: "Projeto API Spring Boot",
-      tags: ["Spring Boot"],
+      title: "Web Server",
+      tags: ["Laravel"],
       description: "Em construção",
       site: "",
       repo: "",
-      article: ""
+      article: "",
+      doc: ""
     },
   ],
   Artigos: [
@@ -176,6 +180,24 @@ const projectsData = {
       title: "Desafio três APIs, 3 linguagens. V.2",
       tags: ["Projetos"],
       description: "APIs em Java, Typescript, Go. Em construção",
+      site: "",
+      repo: "",
+      article: ""
+    },
+  ],
+  Outros: [
+    {
+      title: "Projeto API Go",
+      tags: ["Go"],
+      description: "Em construção",
+      site: "",
+      repo: "",
+      article: ""
+    },
+    {
+      title: "Projeto API Spring Boot",
+      tags: ["Spring Boot"],
+      description: "Em construção",
       site: "",
       repo: "",
       article: ""
