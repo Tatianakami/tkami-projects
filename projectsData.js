@@ -155,7 +155,7 @@ const projectsData = {
     {
       title: "Preparação AWS Cloud Practitioner",
       tags: ["Certificações"],
-      description: "Minha prepração para a certificação",
+      description: "Prepração para certificação CLF-C02",
       site: "",
       repo: "",
       article: "https://medium.com/@eduardolentz/como-me-preparei-para-a-certifica%C3%A7%C3%A3o-aws-cloud-practitioner-e425c43eeec9"
@@ -171,10 +171,10 @@ const projectsData = {
     {
       title: "Preparação AWS Solutions Architect - Associate",
       tags: ["Certificações"],
-      description: "Em construção",
+      description: "Prepração para certificação SAA-C03",
       site: "",
       repo: "",
-      article: ""
+      article: "https://medium.com/@eduardolentz/como-me-preparei-para-a-certifica%C3%A7%C3%A3o-aws-solutions-architect-associate-saa-c03-%EF%B8%8F-996cf4908820"
     },
     {
       title: "Desafio três APIs, 3 linguagens. V.2",
