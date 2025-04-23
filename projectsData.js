@@ -177,6 +177,14 @@ const projectsData = {
       article: "https://medium.com/@eduardolentz/como-me-preparei-para-a-certifica%C3%A7%C3%A3o-aws-solutions-architect-associate-saa-c03-%EF%B8%8F-996cf4908820"
     },
     {
+      title: "Preparação AWS Developer - Associate",
+      tags: ["Certificações"],
+      description: "Prepração para certificação DVA-C02",
+      site: "",
+      repo: "",
+      article: ""
+    },
+    {
       title: "Desafio três APIs, 3 linguagens. V.2",
       tags: ["Projetos"],
       description: "APIs em Java, Typescript, Go. Em construção",
