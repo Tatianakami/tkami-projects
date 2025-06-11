@@ -154,7 +154,7 @@ const projectsData = {
   Artigos: [
     {
       title: "Preparação AWS Cloud Practitioner",
-      tags: ["Certificações"],
+      tags: ["Certificação","Cloud","AWS"],
       description: "Prepração para certificação CLF-C02",
       site: "",
       repo: "",
@@ -162,7 +162,7 @@ const projectsData = {
     },
     {
       title: "Desafio três APIs, 3 linguagens. V.1",
-      tags: ["Projetos"],
+      tags: ["Projeto"],
       description: "APIs em .Net, Python, Node.js",
       site: "",
       repo: "",
@@ -170,15 +170,31 @@ const projectsData = {
     },
     {
       title: "Preparação AWS Solutions Architect - Associate",
-      tags: ["Certificações"],
+      tags: ["Certificação","Cloud","AWS"],
       description: "Prepração para certificação SAA-C03",
       site: "",
       repo: "",
       article: "https://medium.com/@eduardolentz/como-me-preparei-para-a-certifica%C3%A7%C3%A3o-aws-solutions-architect-associate-saa-c03-%EF%B8%8F-996cf4908820"
     },
     {
+      title: "Preparação PSPO I - Scrum.Org",
+      tags: ["Certificação","Scrum"],
+      description: "Professional Scrum Product Owner I",
+      site: "",
+      repo: "",
+      article: "https://medium.com/@eduardolentz/como-me-preparei-para-a-certifica%C3%A7%C3%A3o-pspo-i-da-scrum-org-e-passei-de-primeira-8d0401c8f1cd"
+    },
+    {
+      title: "Microsoft Azure AZ-900",
+      tags: ["Certificação","Cloud","Azure"],
+      description: "Prepração para certificação AZ-900",
+      site: "",
+      repo: "",
+      article: ""
+    },
+    {
       title: "Preparação AWS Developer - Associate",
-      tags: ["Certificações"],
+      tags: ["Certificação"],
       description: "Prepração para certificação DVA-C02",
       site: "",
       repo: "",
