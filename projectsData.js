@@ -193,17 +193,41 @@ const projectsData = {
       article: "https://medium.com/@eduardolentz/%EF%B8%8F-de-volta-%C3%A0-tdc-floripa-um-reencontro-com-a-comunidade-e-as-tend%C3%AAncias-da-arquitetura-cloud-331c3440b57b"
     },
     {
-      title: "Microsoft Azure AZ-900",
+      title: "Preparação Azure AZ-900",
       tags: ["Certificações","Cloud","Azure"],
-      description: "Prepração para certificação AZ-900",
+      description: "Microsoft Certified: Azure Fundamentals",
+      site: "",
+      repo: "",
+      article: "https://medium.com/@eduardolentz/minha-preparação-para-a-certificação-az-900-️-bfa96cc2afef"
+    },
+    {
+      title: "Preparação Azure AI-900",
+      tags: ["Certificações","Cloud","Azure"],
+      description: "Microsoft Certified: Azure AI Fundamentals",
       site: "",
       repo: "",
       article: ""
     },
-    {
-      title: "Preparação AWS Developer - Associate",
-      tags: ["Certificações"],
-      description: "Prepração para certificação DVA-C02",
+        {
+      title: "Preparação Azure DP-900",
+      tags: ["Certificações","Cloud","Azure"],
+      description: "Microsoft Certified: Azure Data Fundamentals",
+      site: "",
+      repo: "",
+      article: ""
+    },
+        {
+      title: "Preparação Azure SC-900",
+      tags: ["Certificações","Cloud","Azure"],
+      description: "MMicrosoft Certified: Security, Compliance, Identity",
+      site: "",
+      repo: "",
+      article: ""
+    },
+        {
+      title: "Preparação Azure AZ-104",
+      tags: ["Certificações","Cloud","Azure"],
+      description: "Microsoft Certified: Azure Administrator Associate",
       site: "",
       repo: "",
       article: ""
