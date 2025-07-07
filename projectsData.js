@@ -201,12 +201,12 @@ const projectsData = {
       article: "https://medium.com/@eduardolentz/minha-preparação-para-a-certificação-az-900-️-bfa96cc2afef"
     },
     {
-      title: "Preparação Azure AI-900",
+      title: "Preparação Azure MS-900",
       tags: ["Certificações","Cloud","Azure"],
-      description: "Microsoft Certified: Azure AI Fundamentals",
+      description: "Microsoft 365 Certified: Fundamentals",
       site: "",
       repo: "",
-      article: ""
+      article: "https://medium.com/@eduardolentz/como-me-preparei-para-a-ms-900-e-fiz-a-prova-em-casa-pearson-onvue-627f83bac0e4"
     },
         {
       title: "Preparação Azure DP-900",
@@ -228,6 +228,14 @@ const projectsData = {
       title: "Preparação Azure AZ-104",
       tags: ["Certificações","Cloud","Azure"],
       description: "Microsoft Certified: Azure Administrator Associate",
+      site: "",
+      repo: "",
+      article: ""
+    },
+    {
+      title: "Preparação Azure AI-900",
+      tags: ["Certificações","Cloud","Azure"],
+      description: "Microsoft Certified: Azure AI Fundamentals",
       site: "",
       repo: "",
       article: ""
