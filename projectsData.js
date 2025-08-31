@@ -1,262 +1,256 @@
-// projectsData.js
 const projectsData = {
-  Cloud: [
+  
+  "FrontEnd": [
     {
-      title: "Site estático na S3",
-      tags: ["AWS"],
-      description: "Hospedando site estático no S3 da AWS",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/como-hospedei-minha-landing-page-profissional-na-aws-s3-um-guia-passo-a-passo-fc33b9ebc454"
+      title: "Controle de Produtos",
+      description: "Aplicativo web para gerenciar produtos e validade.",
+      repo: "https://github.com/Tatianakami/Controle-de-Produtos",
+      tags: ["Front-end"]
     },
     {
-      title: "AWS Database e Analytics",
-      tags: ["AWS"],
-      description: "Projetos AWS de banco de dados e analytics.",
-      site: "",
-      repo: "https://github.com/eduardolentz/AWS-database-projects",
-      article: "https://medium.com/@eduardolentz/explorando-aws-projetos-práticos-de-database-e-analytics-d48a2f907daa"
+      title: "Clone Starbucks",
+      description: "Interface visual inspirada no site da Starbucks.",
+      repo: "https://github.com/Tatianakami/clone-starbucks",
+      tags: ["Front-end"]
     },
     {
-      title: "Automações usando AWS Lambda",
-      tags: ["AWS"],
-      description: "Automações usando AWS Lambda e Python",
-      site: "",
-      repo: "https://github.com/eduardolentz/automacoes-aws-andreiacono-udemy",
-      article: "https://medium.com/@eduardolentz/automa%C3%A7%C3%A3o-na-aws-com-lambda-cinco-projetos-pr%C3%A1ticos-2137e7b8dfbc"
+      title: "Pokédex",
+      description: "App para consulta de pokémons com consumo de API.",
+      repo: "https://github.com/Tatianakami/pokedex",
+      tags: ["Front-end"]
     },
     {
-      title: "Usando AWS CLI e AWS SDK",
-      tags: ["AWS"],
-      description: "Listando buckets S3 com CLI e SDK",
-      site: "",
-      repo: "https://github.com/eduardolentz/AWS-acm-automation",
-      article: "https://medium.com/@eduardolentz/usando-aws-cli-e-aws-sdk-python-boto3-listando-buckets-do-amazon-s3-ee2b56a672b1"
+      title: "Detona Ralph Game",
+      description: "Mini game interativo com HTML, CSS e JavaScript.",
+      repo: "https://github.com/Tatianakami/detona-ralph-game-",
+      tags: ["Front-end"]
     },
     {
-      title: "Adicionando SSL com ACM",
-      tags: ["AWS"],
-      description: "Protocolo de segurança para o meu portfólio",
-      site: "",
-      repo: "https://github.com/eduardolentz/usando-awssdk-python-boto3",
-      article: "https://medium.com/@eduardolentz/como-adicionei-um-certificado-ssl-ao-meu-site-https-d17dfc2157b4"
-    },
+      title: "Carrossel Pets",
+      description: "Componente Vue 3 para exibir pets de forma interativa.",
+      repo: "https://github.com/Tatianakami/carrossel-pets",
+      tags: ["Front-end"]
+    }
   ],
-  DevOps: [
+
+  "Back-End": [
     {
-      title: "Projeto CI/CD GitHub Actions",
-      tags: ["CI/CD", "AWS", "GitHub Actions"],
-      description: "Em construção",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/como-automatizei-o-deploy-do-meu-site-est%C3%A1tico-na-aws-s3-com-github-actions-03417f871227"
+      title: "ETL Ride Bookings",
+      description: "Pipeline de dados com Python e Pandas.",
+      repo: "https://github.com/Tatianakami/ETL-NCR-Ride-Bookings",
+      tags: ["Back-end"]
     },
     {
-      title: "Do Shell ao Docker",
-      tags: ["Linux", "Docker"],
-      description: "3 Projetos de Linux com IaC.",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/do-shell-ao-docker-3-projetos-pr%C3%A1ticos-de-linux-com-iac-no-bootcamp-santander-da-dio-40ea8e2c6305"
+      title: "Banco de Dados Viagens",
+      description: "Modelagem e estrutura de banco de dados para sistema de viagens.",
+      repo: "https://github.com/Tatianakami/Banco-de-dados-Viagens",
+      tags: ["Back-end"]
     },
+    {
+      title: "Sistema Python Banco",
+      description: "Sistema bancário simples via terminal com Python.",
+      repo: "https://github.com/Tatianakami/Sistema_Python_Banco_",
+      tags: ["Back-end"]
+    },
+    {
+      title: "Otimizando Sistema Bancário",
+      description: "Sistema bancário modularizado com funções em Python.",
+      repo: "https://github.com/Tatianakami/Otimizando-sistema-bancario-DIO",
+      tags: ["Back-end"]
+    },
+    {
+      title: "TCG Cards Database",
+      description: "Banco de dados para cartas Pokémon TCG.",
+      repo: "https://github.com/Tatianakami/ok-mon-TCG-E-CARDS-Database",
+      tags: ["Back-end"]
+    }
   ],
-  Python: [
+
+  "Full-Stack": [
     {
-      title: "Exercícios Python ",
-      tags: [""],
-      description: "Exercícios e desafios do curso do André Iacono",
-      site: "",
-      repo: "https://github.com/eduardolentz/python-udemy-andreiacono",
-      article: ""
+      title: "Bank Login App",
+      description: "Aplicativo de login bancário com autenticação.",
+      repo: "https://github.com/Tatianakami/bank-login-app",
+      tags: ["Full-Stack"]
     },
     {
-      title: "Projeto API Python ",
-      tags: ["FastAPI", "Docker"],
-      description: "API em Python com PostgreSQL e Docker.",
-      site: "",
-      repo: "https://github.com/eduardolentz/API-python-biblioteca",
-      article: "https://medium.com/@eduardolentz/construindo-tr%C3%AAs-apis-em-um-final-de-semana-net-python-e-node-js-22a473e4f8df"
+      title: "FastAPI CRUD Products",
+      description: "CRUD completo com FastAPI, SQLite e frontend básico.",
+      repo: "https://github.com/Tatianakami/fastapi-crud-products",
+      tags: ["Full-Stack"]
     },
+    {
+      title: "Agenda Flask",
+      description: "Aplicação web com Flask para gerenciamento de contatos.",
+      repo: "https://github.com/Tatianakami/agenda-flask",
+      tags: ["Full-Stack"]
+    },
+    {
+      title: "Hospedagem Hotel .NET",
+      description: "Sistema de hospedagem com C# e .NET.",
+      repo: "https://github.com/Tatianakami/HospedagemHotel.net",
+      tags: ["Full-Stack"]
+    },
+    {
+      title: "PHP Form",
+      description: "Sistema de cadastro com validações e banco MySQL.",
+      repo: "https://github.com/Tatianakami/PHP-Form",
+      tags: ["Full-Stack"]
+    }
   ],
-  JavaScript: [
+
+  "Python": [
     {
-      title: "Projeto API Node.js",
-      tags: ["Node.js"],
-      description: "API em Node com PostgreSQL e teste",
-      site: "",
-      repo: "https://github.com/eduardolentz/API-node-biblioteca",
-      article: "https://medium.com/@eduardolentz/construindo-tr%C3%AAs-apis-em-um-final-de-semana-net-python-e-node-js-22a473e4f8df"
+      title: "StockInsight",
+      description: "Análise de ações e tendências de mercado.",
+      repo: "https://github.com/Tatianakami/StockInsight",
+      tags: ["Python", "Dados"]
     },
+    {
+      title: "Automação Python",
+      description: "Script para gerar relatórios e enviar por e-mail automaticamente.",
+      repo: "https://github.com/Tatianakami/AutomacaoPython",
+      tags: ["Python", "Back-end"]
+    },
+    {
+      title: "Pythongráfico Análise de Dados",
+      description: "Visualização gráfica de dados com Python.",
+      repo: "https://github.com/Tatianakami/Pythongrafico-Analise-dedados",
+      tags: ["Python", "Dados"]
+    },
+    {
+      title: "Python Log",
+      description: "Sistema de log e monitoramento em Python.",
+      repo: "https://github.com/Tatianakami/Python_log",
+      tags: ["Python", "Back-end"]
+    }
   ],
-  Dados: [
+
+  "APIs": [
     {
-      title: "MinhaBibliotecaDB",
-      tags: ["NoSQL"],
-      description: "Em construção",
-      site: "",
-      repo: "",
-      article: ""
+      title: "API Bancária FastAPI",
+      description: "API RESTful com autenticação JWT para operações bancárias.",
+      repo: "https://github.com/Tatianakami/api-bancaria-fastapi",
+      tags: ["API"]
     },
+    {
+      title: "WorkoutAPI",
+      description: "API de competição de Crossfit com Python moderno.",
+      repo: "https://github.com/Tatianakami/workoutapi",
+      tags: ["API"]
+    },
+    {
+      title: "Diabo Veste API",
+      description: "API temática inspirada no filme 'O Diabo Veste Prada'.",
+      repo: "https://github.com/Tatianakami/diabo-veste-api",
+      tags: ["API"]
+    }
   ],
-  QA: [
+
+  "PHP": [
     {
-      title: "Testes Automatizados",
-      tags: [""],
-      description: "Em construção",
-      site: "",
-      repo: "",
-      article: ""
+      title: "PHP Salário Cálculo",
+      description: "Calculadora em PHP que mostra quantos salários mínimos cabem em um valor.",
+      repo: "https://github.com/Tatianakami/PHP-Salario-Calculo",
+      tags: ["PHP", "Back-end"]
     },
+    {
+      title: "PHP Form",
+      description: "Sistema de cadastro com validações e banco MySQL.",
+      repo: "https://github.com/Tatianakami/PHP-Form",
+      tags: ["PHP", "Full-Stack"]
+    },
+    {
+      title: "Controle de Finanças",
+      description: "Aplicativo PHP para controle de gastos pessoais.",
+      repo: "https://github.com/Tatianakami/controle_financas",
+      tags: ["PHP", "Back-end"]
+    },
+    {
+      title: "Número Aleatório PHP",
+      description: "Gerador de número aleatório com interface simples.",
+      repo: "https://github.com/Tatianakami/PHP_numero_aleatorio",
+      tags: ["PHP", "Back-end"]
+    }
   ],
-  CS: [
+
+  "C#": [
     {
-      title: "Projeto API .NET",
-      tags: [".NET",],
-      description: "API em .NET 8 com PostgreSQL e Docker.",
-      site: "",
-      repo: "https://github.com/eduardolentz/API-dotnet-biblioteca",
-      article: "https://medium.com/@eduardolentz/construindo-tr%C3%AAs-apis-em-um-final-de-semana-net-python-e-node-js-22a473e4f8df"
+      title: "Hospedagem Hotel .NET",
+      description: "Sistema de hospedagem com C# e .NET.",
+      repo: "https://github.com/Tatianakami/HospedagemHotel.net",
+      tags: ["C#", "Full-Stack"]
     },
+    {
+      title: "Desafio POO - Sistema de Celulares",
+      description: "Sistema orientado a objetos para gerenciamento de celulares.",
+      repo: "https://github.com/Tatianakami/Desafio-POO---Sistema-de-Celulares",
+      tags: ["C#", "Back-end"]
+    },
+    {
+      title: "Trilha .NET Fundamentos",
+      description: "Desafio de fundamentos do .NET com C#.",
+      repo: "https://github.com/Tatianakami/trilha-net-fundamentos-desafio",
+      tags: ["C#", "Back-end"]
+    }
   ],
-  FrontEnd: [
+
+  "Data Analytics": [
     {
-      title: "Web site portifólio",
-      tags: ["html+css+js"],
-      description: "Landing page interativa para apresentar meu currículo e projetos",
-      site: "https://www.eduardolentz.com.br",
-      repo: "https://github.com/eduardolentz/website-eduardolentz",
-      article: "",
-      doc: ""
+      title: "Forbes 2000 ETL Dashboard",
+      description: "Dashboard com dados financeiros das maiores empresas do mundo.",
+      repo: "https://github.com/Tatianakami/forbes2000-etl-dashboard",
+      tags: ["Data Analytics"]
     },
+    {
+      title: "Diabetes Data Analysis (Power BI)",
+      description: "Dashboard exploratório com KPIs e gráficos interativos.",
+      repo: "https://github.com/Tatianakami/-diabetes-data-analysis-powerbi",
+      tags: ["Data Analytics"]
+    },
+    {
+      title: "Análise de Feminicídio no Brasil",
+      description: "Dashboard interativo com Streamlit e visualizações em Python.",
+      repo: "https://github.com/Tatianakami/analise-feminicidio-brasil",
+      tags: ["Data Analytics"]
+    },
+    {
+      title: "Dashboard Eletro",
+      description: "Dashboard interativo com dados de consumo elétrico.",
+      repo: "https://github.com/Tatianakami/Dashboard_Eletro",
+      tags: ["Data Analytics"]
+    },
+    {
+      title: "Customer Insights",
+      description: "Análise de comportamento de clientes com visualizações interativas.",
+      repo: "https://github.com/Tatianakami/Customer-Insights",
+      tags: ["Data Analytics"]
+    }
   ],
-  WordPress: [
+
+  "Power BI": [
     {
-      title: "E-comerce",
-      tags: ["WooCommerce"],
-      description: "Em construção",
-      site: "",
-      repo: "",
-      article: "",
-      doc: ""
+      title: "Global Sales Analysis",
+      description: "Dashboard de vendas globais com Power BI.",
+      repo: "https://github.com/Tatianakami/global-sales-analysis",
+      tags: ["Power BI"]
     },
+    {
+      title: "Xbox Dashboard",
+      description: "Dashboard interativo com dados de vendas e engajamento do Xbox.",
+      repo: "https://github.com/Tatianakami/xbox-dashboard",
+      tags: ["Power BI"]
+    }
   ],
-  PHP: [
+
+  "JavaScript": [
     {
-      title: "Web Server",
-      tags: ["Laravel"],
-      description: "Em construção",
-      site: "",
-      repo: "",
-      article: "",
-      doc: ""
-    },
-  ],
-  Artigos: [
-    {
-      title: "Preparação AWS Cloud Practitioner",
-      tags: ["Certificações","Cloud","AWS"],
-      description: "Prepração para certificação CLF-C02",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/como-me-preparei-para-a-certifica%C3%A7%C3%A3o-aws-cloud-practitioner-e425c43eeec9"
-    },
-    {
-      title: "Desafio três APIs, 3 linguagens. V.1",
-      tags: ["Projetos"],
-      description: "APIs em .Net, Python, Node.js",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/construindo-tr%C3%AAs-apis-em-um-final-de-semana-net-python-e-node-js-22a473e4f8df"
-    },
-    {
-      title: "Preparação AWS Solutions Architect - Associate",
-      tags: ["Certificações","Cloud","AWS"],
-      description: "Prepração para certificação SAA-C03",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/como-me-preparei-para-a-certifica%C3%A7%C3%A3o-aws-solutions-architect-associate-saa-c03-%EF%B8%8F-996cf4908820"
-    },
-    {
-      title: "Preparação PSPO I - Scrum.Org",
-      tags: ["Certificações","Scrum"],
-      description: "Professional Scrum Product Owner I",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/como-me-preparei-para-a-certifica%C3%A7%C3%A3o-pspo-i-da-scrum-org-e-passei-de-primeira-8d0401c8f1cd"
-    },
-    {
-      title: "TDC Floripa 2025",
-      tags: ["Eventos"],
-      description: "Experiência na Trilha Cloud",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/%EF%B8%8F-de-volta-%C3%A0-tdc-floripa-um-reencontro-com-a-comunidade-e-as-tend%C3%AAncias-da-arquitetura-cloud-331c3440b57b"
-    },
-    {
-      title: "Preparação Azure AZ-900",
-      tags: ["Certificações","Cloud","Azure"],
-      description: "Microsoft Certified: Azure Fundamentals",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/minha-preparação-para-a-certificação-az-900-️-bfa96cc2afef"
-    },
-    {
-      title: "Preparação Azure MS-900",
-      tags: ["Certificações","Cloud","Azure"],
-      description: "Microsoft 365 Certified: Fundamentals",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/como-me-preparei-para-a-ms-900-e-fiz-a-prova-em-casa-pearson-onvue-627f83bac0e4"
-    },
-        {
-      title: "Preparação Azure DP-900 e SC-900",
-      tags: ["Certificações","Cloud","Azure"],
-      description: "Microsoft Certified",
-      site: "",
-      repo: "",
-      article: "https://medium.com/@eduardolentz/dobradinha-azure-da-semana-como-tirei-a-dp-900-e-sc-900-d0002b6152c2"
-    },
-        {
-      title: "Preparação Azure AZ-104",
-      tags: ["Certificações","Cloud","Azure"],
-      description: "Microsoft Certified: Azure Administrator Associate",
-      site: "",
-      repo: "",
-      article: ""
-    },
-    {
-      title: "Preparação Azure AI-900",
-      tags: ["Certificações","Cloud","Azure"],
-      description: "Fechando Maratona Azure",
-      site: "",
-      repo: "",
-      article: ""
-    },
-    {
-      title: "Desafio três APIs, 3 linguagens. V.2",
-      tags: ["Projetos"],
-      description: "APIs em Java, Typescript, Go. Em construção",
-      site: "",
-      repo: "",
-      article: ""
-    },
-  ],
-  Outros: [
-    {
-      title: "Projeto API Go",
-      tags: ["Go"],
-      description: "Em construção",
-      site: "",
-      repo: "",
-      article: ""
-    },
-    {
-      title: "Projeto API Spring Boot",
-      tags: ["Spring Boot"],
-      description: "Em construção",
-      site: "",
-      repo: "",
-      article: ""
-    },
-  ],
+      title: "Detona Ralph Game",
+      description: "Mini game interativo com HTML, CSS e JavaScript.",
+      repo: "https://github.com/Tatianakami/detona-ralph-game-",
+      tags: ["JavaScript", "Front-end"]
+    }
+  ]
 };
+
+

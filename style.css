@@ -1,4 +1,6 @@
-/* Fontes */
+/* =========================
+   FONTES
+========================= */
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 800;
@@ -16,44 +18,34 @@ p {
   font-weight: 300;
 }
 
+/* =========================
+   BODY E BACKGROUND
+========================= */
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #3c3e41; 
-
+  background-color: #3c3e41;
   background-image:
-    /* (inferior esquerda) */
-    radial-gradient(
-      circle at 20% 80%, 
-      rgba(13, 95, 13, 0.582) 0%, 
-      transparent 50%
-    ),
-    /* (centro-direita) */
-    radial-gradient(
-      circle at 70% 50%, 
-      rgba(241, 118, 2, 0.4) 0%, 
-      transparent 80%
-    ),
-    /* (superior direita) */
-    radial-gradient(
-      circle at 80% 20%, 
-      rgba(21, 179, 171, 0.438) 0%, 
-      transparent 40%
-    );
-
+    radial-gradient(circle at 20% 80%, rgba(13, 95, 13, 0.582) 0%, transparent 50%),
+    radial-gradient(circle at 70% 50%, rgba(241, 118, 2, 0.4) 0%, transparent 80%),
+    radial-gradient(circle at 80% 20%, rgba(21, 179, 171, 0.438) 0%, transparent 40%);
   background-blend-mode: screen;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* Container de flip para Telas 1 e 2 */
+/* =========================
+   CONTAINER DE FLIP
+========================= */
 .flip-container {
   perspective: 1000px;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   position: relative;
   margin: auto;
-  /* overflow: hidden; caso seja necessário */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .flipper {
@@ -61,8 +53,7 @@ body {
   transform-style: preserve-3d;
   position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 500px;
+  min-height: 650px;
   transform-origin: center center;
 }
 
@@ -70,7 +61,9 @@ body {
   transform: rotateY(180deg);
 }
 
-/* Faces do Card */
+/* =========================
+   FACES DO CARD
+========================= */
 .front,
 .back {
   position: absolute;
@@ -78,31 +71,141 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   border-radius: 1rem;
-  background: rgb(235, 232, 232);
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 1.5rem;
+  padding: 2rem;
   box-sizing: border-box;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .back {
   transform: rotateY(180deg);
 }
 
-/* Tela de Projetos */
-#projectsScreen {
+/* =========================
+   GRUPO DE BOTÕES
+========================= */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BOTÕES PRINCIPAIS
+========================= */
+.front button,
+.front a,
+.back button,
+.back a {
+  display: inline-block;
+  min-width: 120px;      /* largura mínima menor */
+  max-width: 200px;      /* evita excesso de largura */
+  white-space: nowrap;   /* impede quebra do texto */
+  text-align: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.front button:hover,
+.front a:hover,
+.back button:hover,
+.back a:hover {
+  filter: brightness(0.85);
+}
+
+/* =========================
+   BOTÃO DE IDIOMA
+========================= */
+#btnLanguage {
+  background-color: #1d8348;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+#btnLanguage:hover {
+  background-color: #239b56;
+}
+/* =========================
+   ÍCONES DE REDES SOCIAIS
+========================= */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem; /* ícones próximos */
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;       /* tamanho menor do container */
+  height: 2rem;
+  border-radius: 50%; /* mantém círculo */
+  background: none;   /* remove a caixa branca */
+  box-shadow: none;   /* remove sombra */
+  transition: all 0.3s ease;
+}
+
+.social-icons a img {
+  width: 47%;      /* ícone ocupa todo o container */
+  height: auto;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 640px) {
+  .social-icons a {
+    width: 1.8rem;   /* menor no mobile */
+    height: 1.8rem;
+  }
+
+  .social-icons {
+    gap: 0.15rem;   /* ícones mais próximos */
+  }
+}
+
+
+/* =========================
+   TELAS DE PROJETOS, BADGES E SOBRE MIM
+========================= */
+#projectsScreen,
+#badgesScreen,
+#aboutScreen {
   position: absolute;
-  top: 50%;
+  top: 50px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgb(235, 232, 232);
+  transform: translateX(-50%);
+  background: #FFFFFF;
   border-radius: 1rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
   padding: 1rem;
   z-index: 50;
   width: 600px;
@@ -112,44 +215,21 @@ body {
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
-}
-
-#projectsScreen.active {
-  opacity: 1;
-  width: 650px;
-  min-height: 570px;
-  pointer-events: auto;
-}
-
-/* Tela de Badges */
-#badgesScreen {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgb(235,232,232);
-  border-radius: 1rem;
-  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-  padding: 1rem;
-  z-index: 100;
-  width: 600px;
-  min-height: 520px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s ease;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-#badgesScreen.active {
+#projectsScreen.active,
+#badgesScreen.active,
+#aboutScreen.active {
   opacity: 1;
   width: 650px;
   min-height: 570px;
   pointer-events: auto;
 }
 
-/* Container de Filtro (Centralizado) */
+/* =========================
+   FILTER BAR
+========================= */
 #filterBar {
   display: flex;
   justify-content: center;
@@ -158,53 +238,80 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Animação de Onda para Badges */
-@keyframes wave {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
+/* =========================
+   BADGES
+========================= */
+#badgesScreen img {
+  width: 80px;
+  height: auto;
+  margin: 0.5rem;
+  max-width: 20%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 #badgesScreen.active .badge-wave {
   animation: wave 1s ease-in-out forwards;
 }
 
-/* Delays Diferentes para cada Badge */
-#badgesScreen.active img:nth-child(1) {
-  animation-delay: 0.2s;
-}
+#badgesScreen.active img:nth-child(1) { animation-delay: 0.2s; }
+#badgesScreen.active img:nth-child(2) { animation-delay: 0.4s; }
+#badgesScreen.active img:nth-child(3) { animation-delay: 0.6s; }
 
-#badgesScreen.active img:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-#badgesScreen.active img:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-/* Hover para Badges */
 #badgesScreen img:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease;
 }
 
-/* Responsividade */
+@keyframes wave {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
 @media (max-width: 640px) {
   #projectsScreen,
-  #projectsScreen.active {
-    width: 95%;
-    min-height: 580px;
-    padding: 1rem;
-  }
-  
+  #projectsScreen.active,
   #badgesScreen,
-  #badgesScreen.active {
+  #badgesScreen.active,
+  #aboutScreen,
+  #aboutScreen.active {
     width: 95%;
     min-height: 580px;
     padding: 1rem;
   }
-  
+
   h1, h2, p {
     text-align: center;
+  }
+
+  .flip-container {
+    max-width: 95%;
+  }
+
+  .front button,
+  .front a,
+  .back button,
+  .back a {
+    min-width: 100px;
+    max-width: 90%;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  #btnLanguage {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .social-icons {
+    gap: 0.35rem;
+  }
+
+  .social-icons a {
+    width: 32px;
+    height: 32px;
   }
 }

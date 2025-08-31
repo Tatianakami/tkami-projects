@@ -1,184 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="imagens/icone.png">
-  <title>Eduardo O. Lentz</title>  
-  <!-- Carrega o Tailwind primeiro -->
+  <title>Tatiana Kamioka</title>  
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Link para o arquivo CSS customizado -->
+  <!-- CSS customizado -->
   <link rel="stylesheet" href="style.css" />
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body class="flex items-center justify-center min-h-screen p-4 relative">
-  <!-- Container do Flip: Telas 1 (Perfil) e 2 (Tecnologias) -->
+
+  <!-- Container Flip -->
   <div id="flipContainer" class="flip-container">
     <div id="card" class="flipper">
-      <!-- Tela 1: Perfil -->
+
+      <!-- Tela Perfil (Front) -->
       <div class="front">
-        <img src="imagens/foto-perfil.jpg" alt="Foto de perfil" class="w-48 h-48 rounded-full mx-auto" />
-        <h1 class="text-3xl font-bold mt-4">Eduardo O. Lentz</h1>
-        <p class="text-gray-600">Cloud Computing | Eng. de Software</p>
+        <img src="imagens/tati.jpg" alt="Foto de perfil" class="w-48 h-48 rounded-full mx-auto" />
+        <h1 class="text-3xl font-bold mt-4">Tatiana Kamioka</h1>
+        <div class="text-gray-900 text-sm text-center leading-tight mt-2">
+        <p>Desenvolvedora Web & Analista de Dados Jr</p>
+        <p class="text-xs text-gray-700 mt-1">Ciência da Computação</p>
+        </div>
         <div class="mt-4">
-          <p id="local">📍 Porto Alegre - RS, Brasil</p>
+          <p id="local">📍 São Paulo, SP-Brasil</p>
         </div>
-        <!-- Redes Sociais -->
-        <div class="flex justify-center gap-4 mt-8">
-          <a href="https://wa.me/5551992131010" target="_blank">
-            <img src="imagens/whatsapp.png" alt="WhatsApp" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
-          </a>
-          <a href="https://www.linkedin.com/in/eduardolentz/" target="_blank">
-            <img src="imagens/linkedin.png" alt="LinkedIn" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
-          </a>
-          <a href="https://github.com/eduardolentz" target="_blank">
-            <img src="imagens/github.png" alt="GitHub" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
-          </a>
-          <a href="https://medium.com/@eduardolentz" target="_blank">
-            <img src="imagens/medium.png" alt="Medium" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
-          </a>
-          <!--
-          <a href="https://dev.to/eduardolentz" target="_blank">
-            <img src="imagens/dev.png" alt="Medium" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
-          </a>
-          <a href="https://gitlab.com/eduardo.lentz" target="_blank">
-            <img src="imagens/gitlab.png" alt="GitLab" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
-          </a>
-        -->
-          <a href="https://www.instagram.com/eduardolntz" target="_blank">
-            <img src="imagens/instagram.png" alt="Instagram" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
-          </a>
-          <a href="mailto:eduardo.lentz@gmail.com" target="_blank">
-            <img src="imagens/email.png" alt="E-mail" class="w-8 hover:scale-110 hover:opacity-80 transition-transform duration-300" />
-          </a>
-        </div>
-        <!-- Botões: Badges, Currículo, Projetos -->
+<!-- Redes Sociais -->
+<div class="social-icons">
+  <a href="https://wa.me/5511969012951" target="_blank">
+    <img src="imagens/whatsapp.png" alt="WhatsApp" />
+  </a>
+  <a href="https://www.linkedin.com/in/tatiana-kami/" target="_blank">
+    <img src="imagens/linkedin.png" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/tatianakami" target="_blank">
+    <img src="imagens/github.png" alt="GitHub" />
+  </a>
+  <a href="mailto:linkedin.com/in/tatiana-kami" target="_blank">
+    <img src="imagens/email.png" alt="E-mail" />
+  </a>
+</div>
+
+
+
+        <!-- Botões: Badges, Currículo, Projetos, Sobre -->
         <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <button onclick="showBadges()"
-            class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">
+          <button onclick="showBadges()" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">
             Badges
           </button>
-          <a href="EduardoLentz-CV-2025.7.pdf" target="_blank" download
-            class="border border-blue-700 text-blue-700 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-blue-700 hover:text-white">
+          <a href="tatiana.dev.pdf" target="_blank" download class="border border-blue-700 text-blue-700 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-blue-700 hover:text-white">
             Currículo PDF
           </a>
-          <button onclick="flipCardToTech()"
-            class="border border-green-800 text-green-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-green-800 hover:text-white">
+          <button onclick="flipCardToTech()" class="border border-green-800 text-green-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-green-800 hover:text-white">
             Projetos
           </button>
+          <button onclick="showAbout()" class="border border-green-500 text-green-500 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-green-500 hover:text-white flex-1 max-w-xs text-center">
+          Sobre Mim
+          </button>
+          <div class="absolute top-4 right-4">
+  <button id="btnLanguage" class="border px-3 py-1 rounded-full shadow-md hover:bg-gray-800 hover:text-white transition">
+    EN
+  </button>
+</div>
+
+
         </div>
       </div>
-      
-      <!-- Tela 2: Tecnologias (lado de trás) -->
+
+      <!-- Tela Tecnologias (Back) -->
       <div class="back">
-        <h2 class="text-2xl font-bold">Tecnologia</h2>
+        <h2 class="text-2xl font-bold mb-4 text-center">Tecnologias</h2>
         <div class="mt-4 grid grid-cols-2 gap-3">
-          <button onclick="showProjects('Cloud')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/cloud.png" class="w-5 h-5" alt="Cloud">Cloud
+
+          <!-- Desenvolvimento -->
+          <button onclick="showProjects('FrontEnd')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Front-end</button>
+          <button onclick="showProjects('Back-End')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Back-end</button>
+          <button onclick="showProjects('Full-Stack')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Full-Stack</button>
+          <button onclick="showProjects('JavaScript')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">JavaScript</button>
+          <button onclick="showProjects('Python')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Python</button>
+          <button onclick="showProjects('PHP')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">PHP</button>
+          <button onclick="showProjects('C#')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">C#</button>
+
+          <!-- Dados e IA -->
+          <button onclick="showProjects('Data Analytics')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Data Analytics</button>
+          <button onclick="showProjects('Machine Learning')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Machine Learning</button>
+
+          <!-- Infraestrutura -->
+          <button onclick="showProjects('APIs')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">APIs</button>
+
+          <!-- Qualidade -->
+          <button onclick="showProjects('Power BI')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Power BI</button>
+
+          <!-- Conteúdo -->
+          <button onclick="showProjects('Artigos')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Artigos</button>
+
+          <button onclick="flipCardToProfile()"
+            class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white flex items-center gap-2">
+            Voltar
           </button>
-          <button onclick="showProjects('DevOps')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/settings.png" class="w-5 h-5" alt="DevOps">DevOps
-          </button>
-          <button onclick="showProjects('Python')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/python.png" class="w-5 h-5" alt="Python">Python
-          </button>
-          <button onclick="showProjects('JavaScript')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/javascript.png" class="w-5 h-5" alt="JavaScript">JavaScript
-          </button>
-          <button onclick="showProjects('Dados')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/database.png" class="w-5 h-5" alt="Dados">Dados
-          </button>
-          <button onclick="showProjects('QA')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/window-bug.png" class="w-5 h-5" alt="QA">QA
-          </button>
-          <button onclick="showProjects('CS')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/cs.png" class="w-5 h-5" alt="C#">C#
-          </button>
-          <button onclick="showProjects('FrontEnd')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/monitor.png" class="w-5 h-5" alt="Front-end">Front-end
-          </button>
-          <button onclick="showProjects('WordPress')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/wordpress.png" class="w-5 h-5" alt="Front-end">WordPress
-          </button>
-          <button onclick="showProjects('PHP')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/php.png" class="w-5 h-5" alt="Front-end">PHP
-          </button>
-          <button onclick="showProjects('Artigos')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/documents.png" class="w-5 h-5" alt="Artigos">Artigos
-          </button>
-          <button onclick="showProjects('Outros')" class="border border-gray-500 text-gray-600 text-lg px-4 py-2 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white flex items-center justify-center gap-2">
-            <img src="https://img.icons8.com/pulsar-color/48/more.png" class="w-5 h-5" alt="Outros">Outros
-          </button>
+
         </div>
-        <!-- Botão para voltar -->
-        <button onclick="flipCardToProfile()"
-          class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white flex items-center gap-2">
-          <img src="https://img.icons8.com/pulsar-color/48/return.png" class="w-4 h-4" alt="Voltar"> Voltar
-        </button>
       </div>
     </div>
   </div>
-  
-  <!-- Tela de Projetos (fora do flip) -->
-  <div id="projectsScreen">
-    <h2 class="text-2xl font-bold mb-4 text-center">
-      Projetos em <span id="techTitle"></span>
-    </h2>
-    <div id="filterBar"></div>
-    <!-- Grid para os projetos -->
-    <div id="projectsContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full"></div>
-    <div class="w-full flex flex-nowrap justify-between items-center mt-auto">
-      <div class="flex gap-2 md:gap-4">
-        <button onclick="hideProjects()"
-          class="border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white flex items-center gap-2">
-          <img src="https://img.icons8.com/pulsar-color/48/return.png" class="w-5 h-5" alt="Voltar"> Voltar
-        </button>
-        <button onclick="goHome()"
-          class="border border-green-800 text-green-800 px-4 py-2 rounded-full shadow-md transition hover:bg-green-800 hover:text-white flex items-center gap-2">
-          <img src="https://img.icons8.com/material-outlined/24/000000/user.png" class="w-4 h-4" alt="Perfil"> Perfil
-        </button>
-      </div>
+
+  <!-- Tela Projetos -->
+  <div id="projectsScreen" class="w-full max-w-5xl mx-auto hidden">
+    <h2 class="text-2xl font-bold mb-4 text-center">Projetos em <span id="techTitle"></span></h2>
+    <div id="filterBar" class="flex flex-wrap mb-4"></div>
+    <div id="projectsContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+
+    <div class="flex justify-between items-center mt-6 flex-wrap gap-4">
+      <button onclick="goHome()" class="btn-green">Perfil</button>
+      <button onclick="voltarDosProjects()"
+        class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white flex items-center gap-2">
+        Voltar
+      </button>
+
       <div id="paginationControls" class="flex gap-2 items-center">
-        <button id="prevPage" onclick="prevPage()" class="border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-          <img src="https://img.icons8.com/pulsar-color/48/back.png" class="w-4 h-4" alt="Anterior">
-        </button>
+        <button id="prevPage" onclick="prevPage()" class="btn-gray">Anterior</button>
         <span id="pageIndicator" class="text-gray-600"></span>
-        <button id="nextPage" onclick="nextPage()" class="border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white">
-          <img src="https://img.icons8.com/pulsar-color/48/forward.png" class="w-4 h-4" alt="Próximo">
-        </button>
+        <button id="nextPage" onclick="nextPage()" class="btn-gray">Próximo</button>
       </div>
     </div>
   </div>
+
+ <!-- Tela Badges -->
+<div id="badgesScreen" class="hidden p-4 bg-gray-100 rounded-lg shadow-lg">
+  <h2 class="text-2xl font-bold text-center mb-6">Badges</h2>
   
-  <!-- Tela de Badges (fora do flip) -->
-  <div id="badgesScreen">
-    <h2 class="text-2xl font-bold text-center mb-4">Badges</h2>
-    <div class="flex justify-center gap-4">
-      <img src="imagens/badges/aws2.png" alt="AWS Certified Solutions Architect Associate" class="badge-wave w-28 h-28 object-contain" />
-      <img src="imagens/badges/aws1.png" alt="AWS Certified Cloud Practitioner" class="badge-wave w-28 h-28 object-contain" />
-      <img src="imagens/badges/pspo1.png" alt="PSPO I (Scrum.org)" class="badge-wave w-24 h-24 object-contain" />
-      <img src="imagens/badges/psm1.png" alt="PSM I (Scrum.org)" class="badge-wave w-24 h-24 object-contain" />
-      <img src="imagens/badges/pmi.png" alt="PMI Member" class="badge-wave w-24 h-24 object-contain" />
-    </div>
-    <div class="flex justify-center gap-4">
-      <img src="imagens/badges/az900.png" alt="Microsoft Certified: Azure Fundamentals" class="badge-wave w-28 h-28 object-contain" />
-      <img src="imagens/badges/ms900.png" alt="Microsoft 365 Certified: Fundamentals" class="badge-wave w-28 h-28 object-contain" />
-      <img src="imagens/badges/dp900.png" alt="Microsoft Certified: Azure Data Fundamentals" class="badge-wave w-28 h-28 object-contain" />
-      <img src="imagens/badges/sc900.png" alt="Microsoft Certified: Microsoft Security, Compliance, and Identity Fundamentals" class="badge-wave w-28 h-28 object-contain" />
-    </div>
-    <div class="mt-auto flex gap-4">
-      <a href="https://www.credly.com/users/eduardolentz" target="_blank"
-         class="border border-orange-600 text-orange-600 px-4 py-2 rounded-full shadow-md transition hover:bg-orange-600 hover:text-white flex items-center gap-2">
-         <img src="https://img.icons8.com/pulsar-color/48/warranty.png" class="w-4 h-4" alt="Credly"> Credly
-      </a>
-      <button onclick="voltarDosBadges()"
-        class="border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white flex items-center gap-2">
-        <img src="https://img.icons8.com/pulsar-color/48/return.png" class="w-4 h-4" alt="Voltar"> Voltar
+  <div class="flex justify-center flex-wrap gap-6">
+    <img src="imagens/badges/suzano.jpg" class="badge-img" />
+    <img src="imagens/badges/api.jpg" class="badge-img" />
+    <img src="imagens/badges/dados.jpg" class="badge-img" />
+    <img src="imagens/badges/akad.jpg" class="badge-img" />
+    <img src="imagens/badges/Squadio.jpg" class="badge-img" />
+    <img src="imagens/badges/machine3.jpg" class="badge-img" />
+    <img src="imagens/badges/codegirl.jpg" class="badge-img" />
+  </div>
+  
+  <div class="flex justify-center flex-wrap gap-6 mt-6">
+    <img src="imagens/badges/docker.png" class="badge-img" />
+    <img src="imagens/badges/csharp.png" class="badge-img" />
+    <img src="imagens/badges/js.png" class="badge-img" />
+    <img src="imagens/badges/html.png" class="badge-img" />
+    <img src="imagens/badges/sql.png" class="badge-img" />
+    <img src="imagens/badges/py_115518.png" class="badge-img" />
+    <img src="imagens/badges/aws.png" class="badge-img" />
+    <img src="imagens/badges/lambid.png" class="badge-img" />
+    <img src="imagens/badges/terraf.png" class="badge-img" />
+  </div>
+
+  <div class="flex justify-center mt-6">
+    <button onclick="voltarDosBadges()" class="btn-red px-6 py-2 rounded-full shadow-md hover:bg-red-600 transition">
+      Voltar
+    </button>
+  </div>
+</div>
+
+
+  <!-- Tela Sobre Mim -->
+  <div id="aboutScreen" class="hidden w-full max-w-5xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4 text-center">About Me</h2>
+    <p class="text-gray-700 text-center max-w-2xl mx-auto">
+      Sou uma profissional apaixonada por transformar desafios em soluções inteligentes. Com formação em Engenharia de Produção e experiência nas áreas de atendimento, logística e finanças, também concluí uma pós-graduação em Segurança da Informação.
+
+      Atualmente, estou em transição para a área de tecnologia, movida pela paixão por dados, desenvolvimento web e pela oportunidade de criar soluções que conectem estratégia e inovação. Tenho foco em dados e desenvolvimento web, buscando aplicar meu conhecimento multidisciplinar, aprender continuamente e desenvolver projetos que gerem impacto real e resultados concretos
+    </p>
+    <div class="flex justify-center mt-6">
+      <button onclick="voltarDoSobreMim()" class="border border-blue-500 text-blue-500 px-4 py-2 rounded-full shadow-md transition hover:bg-blue-500 hover:text-white">
+        Voltar
       </button>
     </div>
   </div>
-  
+
   <!-- Scripts -->
   <script src="projectsData.js"></script>
   <script src="script.js"></script>
