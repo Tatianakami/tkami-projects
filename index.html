@@ -22,8 +22,8 @@
         <img src="imagens/tati.jpg" alt="Foto de perfil" class="w-48 h-48 rounded-full mx-auto" />
         <h1 class="text-3xl font-bold mt-4">Tatiana Kamioka</h1>
         <div class="text-gray-900 text-sm text-center leading-tight mt-2">
-        <p>Desenvolvedora de Dados & Back-end Jr</p>
-        <p class="text-xs text-gray-700 mt-1">Ciência da Computação</p>
+        <h2 class="text-xl font-semibold mt-2">Estagiária em Dados</h2>
+        <h2 class="text-sm text-gray-700">SQL | Power BI | Python</h2>
         </div>
         <div class="mt-4">
           <p id="local">📍 São Paulo, SP-Brasil</p>
@@ -36,10 +36,10 @@
   <a href="https://www.linkedin.com/in/tatiana-kami/" target="_blank">
     <img src="imagens/linkedin.png" alt="LinkedIn" />
   </a>
-  <a href="https://github.com/tatianakami" target="_blank">
+  <a href="https://github.com/Tatianakami" target="_blank">
     <img src="imagens/github.png" alt="GitHub" />
   </a>
-  <a href="mailto:linkedin.com/in/tatiana-kami" target="_blank">
+  <a href="mailto:tatiana.kamioka.dev@gmail.com" target="_blank">
     <img src="imagens/email.png" alt="E-mail" />
   </a>
 </div>
@@ -75,29 +75,27 @@
         <h2 class="text-2xl font-bold mb-4 text-center">Tecnologias</h2>
         <div class="mt-4 grid grid-cols-2 gap-3">
 
-          <!-- Desenvolvimento -->
-          <button onclick="showProjects('FrontEnd')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Front-end</button>
-          <button onclick="showProjects('Back-End')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Back-end</button>
-          <button onclick="showProjects('Full-Stack')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Full-Stack</button>
-          <button onclick="showProjects('JavaScript')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">JavaScript</button>
-          <button onclick="showProjects('Python')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Python</button>
-          <button onclick="showProjects('PHP')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">PHP</button>
-          <button onclick="showProjects('C#')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">C#</button>
+        <!-- Tecnologias (FOCO EM DADOS) -->
 
-          <!-- Dados e IA -->
-          <button onclick="showProjects('Data Analytics')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Data Analytics</button>
-          <button onclick="showProjects('Machine Learning')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Machine Learning</button>
+<button onclick="showProjects('Data Analytics')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">
+  Data Analytics
+</button>
 
-          <!-- Infraestrutura -->
-          <button onclick="showProjects('APIs')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">APIs</button>
+<button onclick="showProjects('Machine Learning')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">
+  Machine Learning
+</button>
 
-          <!-- Qualidade -->
-          <button onclick="showProjects('Power BI')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Power BI</button>
+<button onclick="showProjects('Power BI')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">
+  Power BI
+</button>
+
+<button onclick="showProjects('Data Engineering')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">
+  Data Engineering
+</button>
 
           <!-- Conteúdo -->
-          <button onclick="showProjects('Artigos')" class="border border-gray-800 text-gray-800 text-sm px-4 py-2 rounded-full shadow-md transition hover:bg-gray-800 hover:text-white">Artigos</button>
-
-          <button onclick="flipCardToProfile()"
+         
+  <button onclick="flipCardToProfile()"
             class="mt-auto border border-red-500 text-red-500 px-4 py-2 rounded-full shadow-md transition hover:bg-red-500 hover:text-white flex items-center gap-2">
             Voltar
           </button>
@@ -165,11 +163,15 @@
   <!-- Tela Sobre Mim -->
   <div id="aboutScreen" class="hidden w-full max-w-5xl mx-auto">
     <h2 class="text-2xl font-bold mb-4 text-center">About Me</h2>
-    <p class="text-gray-700 text-center max-w-2xl mx-auto">
-      Sou uma profissional apaixonada por transformar desafios em soluções inteligentes. Com formação em Engenharia de Produção e experiência nas áreas de atendimento, logística e finanças, também concluí uma pós-graduação em Segurança da Informação.
-
-      Atualmente, estou em transição para a área de tecnologia, movida pela paixão por dados, desenvolvimento web e pela oportunidade de criar soluções que conectem estratégia e inovação. Tenho foco em dados e desenvolvimento web, buscando aplicar meu conhecimento multidisciplinar, aprender continuamente e desenvolver projetos que gerem impacto real e resultados concretos
-    </p>
+  <p class="text-gray-700 text-center max-w-2xl mx-auto">
+  Estagiária na área de Dados e estudante de Ciência da Computação, com foco em análise, visualização e desenvolvimento de soluções orientadas a dados.
+  <br><br>
+  Possuo experiência com SQL, Power BI e Python, aplicando esses conhecimentos em projetos práticos como análise de vendas, predição de churn e integração de dados entre sistemas.
+  <br><br>
+  Minha trajetória anterior em Engenharia de Produção contribui com uma visão analítica e orientada a processos, permitindo transformar dados em insights para tomada de decisão.
+  <br><br>
+  Busco evoluir continuamente na área de dados, unindo análise e engenharia para construção de soluções eficientes e de impacto.
+</p>
     <div class="flex justify-center mt-6">
       <button onclick="voltarDoSobreMim()" class="border border-blue-500 text-blue-500 px-4 py-2 rounded-full shadow-md transition hover:bg-blue-500 hover:text-white">
         Voltar
