@@ -1,7 +1,5 @@
 const projectsData = {
   
- 
-
   "Machine Learning": [
     {
       title: "Predição de Churn com PySpark",
