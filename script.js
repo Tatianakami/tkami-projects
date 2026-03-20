@@ -16,14 +16,13 @@ const textPT = {
   article: "Artigo",
   doc: "Documentação",
   page: "Pag",
-  aboutMe: `Sou uma profissional apaixonada por transformar desafios em soluções inteligentes. 
-Com formação em Engenharia de Produção e experiência nas áreas de atendimento, logística e finanças, 
-também concluí uma pós-graduação em Segurança da Informação.
+aboutMe: `Estagiária na área de Dados e estudante de Ciência da Computação, com foco em análise, visualização e desenvolvimento de soluções orientadas a dados.
 
-Atualmente, estou em transição para a área de tecnologia, movida pela paixão por dados, desenvolvimento web 
-e pela oportunidade de criar soluções que conectem estratégia e inovação. Tenho foco em dados e desenvolvimento web, 
-buscando aplicar meu conhecimento multidisciplinar, aprender continuamente e desenvolver projetos que gerem impacto real e resultados concretos.`
-};
+Possuo experiência com SQL, Power BI e Python, aplicando esses conhecimentos em projetos práticos como análise de vendas, predição de churn e construção de pipelines de dados.
+
+Minha formação em Engenharia de Produção agrega uma visão analítica, estruturada e orientada a processos, permitindo transformar dados em insights estratégicos para tomada de decisão.
+
+Atualmente, venho desenvolvendo projetos voltados a Data Analytics e Data Engineering, com o objetivo de evoluir continuamente e construir soluções escaláveis, eficientes e de impacto real.`
 
 const textEN = {
   role: "Web Developer & Junior Data Analyst",
@@ -40,14 +39,13 @@ const textEN = {
   article: "Article",
   doc: "Documentation",
   page: "Page",
-  aboutMe: `I am a professional passionate about transforming challenges into smart solutions. 
-With a background in Production Engineering and experience in customer service, logistics, and finance, 
-I also completed a postgraduate degree in Information Security.
+aboutMe: `I am a data-focused professional and Computer Science student, with a strong focus on data analysis, visualization, and building data-driven solutions.
 
-I am currently transitioning into the technology field, driven by my passion for data, web development, 
-and the opportunity to create solutions that connect strategy and innovation. My focus is on data and web development, 
-seeking to apply my multidisciplinary knowledge, learn continuously, and develop projects that generate real impact and tangible results.`
-};
+I have experience with SQL, Power BI, and Python, applying these tools in practical projects such as sales analysis, churn prediction, and data pipeline development.
+
+My background in Production Engineering brings a structured, analytical, and process-oriented mindset, enabling me to transform data into strategic insights for decision-making.
+
+Currently, I am developing projects in Data Analytics and Data Engineering, aiming to continuously grow and build scalable, efficient solutions that generate real impact.`
 
 let currentLang = "PT";
 
@@ -56,9 +54,8 @@ function updateLanguage() {
   const texts = currentLang === "PT" ? textPT : textEN;
 
   // Perfil
-  document.querySelector(".text-gray-900 p:first-child").innerText = texts.role;
-  document.querySelector(".text-gray-900 p:nth-child(2)").innerText = texts.education;
-  document.getElementById("local").innerText = texts.location;
+document.querySelectorAll(".text-gray-900 h2")[0].innerText = texts.role;
+document.querySelectorAll(".text-gray-900 h2")[1].innerText = texts.education;
 
   // Botões Front
   document.querySelectorAll(".front button, .front a").forEach(btn => {
@@ -86,10 +83,17 @@ function updateLanguage() {
 }
 
 // Alternar idioma
-document.getElementById("btnLanguage").addEventListener("click", () => {
-  currentLang = currentLang === "PT" ? "EN" : "PT";
-  updateLanguage();
-  document.getElementById("btnLanguage").innerText = currentLang === "PT" ? "EN" : "PT";
+document.addEventListener("DOMContentLoaded", () => {
+  const btnLanguage = document.getElementById("btnLanguage");
+
+  if (btnLanguage) {
+    btnLanguage.addEventListener("click", () => {
+      currentLang = currentLang === "PT" ? "EN" : "PT";
+      updateLanguage();
+      btnLanguage.innerText = currentLang === "PT" ? "EN" : "PT";
+    });
+  }
+});
 });
 
 // ==========================
@@ -283,3 +287,6 @@ function voltarDoSobreMim() {
   document.getElementById("aboutScreen").classList.remove("active");
   document.getElementById("flipContainer").style.display = "flex";
 }
+
+
+
