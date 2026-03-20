@@ -2,8 +2,8 @@
 // Tradução PT/EN
 // ==========================
 const textPT = {
-  role: "Desenvolvedora Web & Analista de Dados Jr",
-  education: "Ciência da Computação",
+  role: "Dados | Python, SQL e Engenharia de Dados",
+  education: "Cursando Ciência da Computação",
   location: "📍 São Paulo, SP-Brasil",
   badges: "Badges",
   resume: "Currículo PDF",
@@ -16,14 +16,20 @@ const textPT = {
   article: "Artigo",
   doc: "Documentação",
   page: "Pag",
-aboutMe: `Estagiária na área de Dados e estudante de Ciência da Computação, com foco em análise, visualização e desenvolvimento de soluções orientadas a dados.
-Possuo experiência com SQL, Power BI e Python, aplicando esses conhecimentos em projetos práticos como análise de vendas, predição de churn e construção de pipelines de dados.
-Minha formação em Engenharia de Produção agrega uma visão analítica, estruturada e orientada a processos, permitindo transformar dados em insights estratégicos para tomada de decisão.
-Atualmente, venho desenvolvendo projetos voltados a Data Analytics e Data Engineering, com o objetivo de evoluir continuamente e construir soluções escaláveis, eficientes e de impacto real.`
+  aboutMe: `Atualmente atuo como estagiária na área de Dados, com foco no desenvolvimento de soluções orientadas a dados.
+
+Tenho experiência com Python, SQL e Power BI, aplicando esses conhecimentos em projetos práticos como análise de dados, predição de churn e construção de pipelines de dados.
+
+Venho direcionando minha evolução para Engenharia de Dados, com estudos e projetos envolvendo PySpark, ETL e integração de dados, além de análise exploratória e visualização.
+
+Sou estudante de Ciência da Computação e possuo formação em Engenharia de Produção, o que contribui com uma visão analítica e orientada a processos, permitindo transformar dados em insights para tomada de decisão.
+
+Meu objetivo é atuar na área de Dados, com foco em Engenharia de Dados e Análise de Dados, desenvolvendo soluções eficientes, escaláveis e de impacto real.`
+};
 
 const textEN = {
-  role: "Web Developer & Junior Data Analyst",
-  education: "Computer Science",
+  role: "Data | Python, SQL & Data Engineering",
+  education: "Computer Science Student",
   location: "📍 São Paulo, Brazil",
   badges: "Badges",
   resume: "Resume PDF",
@@ -36,22 +42,36 @@ const textEN = {
   article: "Article",
   doc: "Documentation",
   page: "Page",
-aboutMe: `I am a data-focused professional and Computer Science student, with a strong focus on data analysis, visualization, and building data-driven solutions.
-I have experience with SQL, Power BI, and Python, applying these tools in practical projects such as sales analysis, churn prediction, and data pipeline development.
-My background in Production Engineering brings a structured, analytical, and process-oriented mindset, enabling me to transform data into strategic insights for decision-making.
-Currently, I am developing projects in Data Analytics and Data Engineering, aiming to continuously grow and build scalable, efficient solutions that generate real impact.`
+  aboutMe: `I am currently working as a Data Intern, focusing on building data-driven solutions.
+
+I have experience with Python, SQL, and Power BI, applying these skills in projects such as data analysis, churn prediction, and data pipeline development.
+
+I am progressing towards Data Engineering, working with PySpark, ETL processes, and data integration, along with exploratory data analysis and visualization.
+
+I am a Computer Science student with a background in Production Engineering, bringing a structured and analytical mindset to transform data into actionable insights.
+
+My goal is to work in the Data field, focusing on Data Engineering and Data Analytics, building scalable and impactful solutions.`
+};
 
 let currentLang = "PT";
 
-// Atualiza os textos de acordo com o idioma
+// ==========================
+// Atualiza idioma
+// ==========================
 function updateLanguage() {
   const texts = currentLang === "PT" ? textPT : textEN;
 
   // Perfil
-document.querySelectorAll(".text-gray-900 h2")[0].innerText = texts.role;
-document.querySelectorAll(".text-gray-900 h2")[1].innerText = texts.education;
+  const titles = document.querySelectorAll(".text-gray-900 h2");
+  if (titles.length >= 2) {
+    titles[0].innerText = texts.role;
+    titles[1].innerText = texts.education;
+  }
 
-  // Botões Front
+  const location = document.getElementById("local");
+  if (location) location.innerText = texts.location;
+
+  // Botões front
   document.querySelectorAll(".front button, .front a").forEach(btn => {
     if (btn.innerText.includes("Badges")) btn.innerText = texts.badges;
     if (btn.innerText.includes("Currículo") || btn.innerText.includes("Resume")) btn.innerText = texts.resume;
@@ -59,13 +79,17 @@ document.querySelectorAll(".text-gray-900 h2")[1].innerText = texts.education;
     if (btn.innerText.includes("Sobre") || btn.innerText.includes("About")) btn.innerText = texts.about;
   });
 
-  // Botões Back
-  document.querySelector(".back h2").innerText = texts.technologies;
+  // Back
+  const backTitle = document.querySelector(".back h2");
+  if (backTitle) backTitle.innerText = texts.technologies;
+
   document.querySelectorAll(".back button").forEach(btn => {
-    if (btn.innerText.includes("Voltar") || btn.innerText.includes("Back")) btn.innerText = texts.back;
+    if (btn.innerText.includes("Voltar") || btn.innerText.includes("Back")) {
+      btn.innerText = texts.back;
+    }
   });
 
-  // Texto Sobre Mim
+  // Sobre mim
   const aboutText = document.querySelector("#aboutScreen p");
   if (aboutText) aboutText.innerText = texts.aboutMe;
 
@@ -76,7 +100,9 @@ document.querySelectorAll(".text-gray-900 h2")[1].innerText = texts.education;
   }
 }
 
-// Alternar idioma
+// ==========================
+// Botão idioma
+// ==========================
 document.addEventListener("DOMContentLoaded", () => {
   const btnLanguage = document.getElementById("btnLanguage");
 
@@ -88,10 +114,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-});
 
 // ==========================
-// Funções do Flip e Navegação
+// Flip
 // ==========================
 function flipCardToTech() {
   document.getElementById("card").classList.add("flipped");
@@ -101,156 +126,20 @@ function flipCardToProfile() {
   document.getElementById("card").classList.remove("flipped");
 }
 
-let currentTech = "";
-let currentFilter = "";
-let currentPage = 1;
-
-function getProjectsPerPage() {
-  return window.innerWidth <= 640 ? 3 : 6;
-}
-
-function showProjects(tech) {
-  document.getElementById("badgesScreen").classList.remove("active");
-  currentTech = tech;
-  currentPage = 1;
-  currentFilter = "";
-  document.getElementById("techTitle").innerText = tech;
-  renderFilterBar(tech);
-  renderProjects();
-  renderPagination();
+// ==========================
+// Navegação
+// ==========================
+function showAbout() {
   document.getElementById("flipContainer").style.display = "none";
-  document.getElementById("projectsScreen").classList.add("active");
-}
-
-function renderFilterBar(tech) {
-  const filterBar = document.getElementById("filterBar");
-  filterBar.innerHTML = "";
-  const projects = projectsData[tech] || [];
-  let tagsSet = new Set();
-  projects.forEach(proj => {
-    if (proj.tags) proj.tags.forEach(tag => tagsSet.add(tag));
-  });
-  const tags = Array.from(tagsSet);
-  if (tags.length > 0) {
-    filterBar.classList.remove("hidden");
-    const btnAll = document.createElement("button");
-    btnAll.innerText = currentLang === "PT" ? "Todos" : "All";
-    btnAll.className = "border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white mr-2";
-    btnAll.onclick = () => {
-      currentFilter = "";
-      currentPage = 1;
-      renderProjects();
-      renderPagination();
-    };
-    filterBar.appendChild(btnAll);
-    tags.forEach(tag => {
-      const btn = document.createElement("button");
-      btn.innerText = tag;
-      btn.className = "border border-gray-500 text-gray-500 px-2 py-1 rounded-full shadow-md transition hover:bg-gray-500 hover:text-white mr-2";
-      btn.onclick = () => {
-        currentFilter = tag;
-        currentPage = 1;
-        renderProjects();
-        renderPagination();
-      };
-      filterBar.appendChild(btn);
-    });
-  } else {
-    filterBar.classList.add("hidden");
-  }
-}
-
-function renderProjects() {
-  const container = document.getElementById("projectsContainer");
-  container.innerHTML = "";
-  const projects = projectsData[currentTech] || [];
-  const filteredProjects = currentFilter
-    ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter))
-    : projects;
-
-  const startIndex = (currentPage - 1) * getProjectsPerPage();
-  const pageProjects = filteredProjects.slice(startIndex, startIndex + getProjectsPerPage());
-
-  const texts = currentLang === "PT" ? textPT : textEN;
-
-  pageProjects.forEach(proj => {
-    const projectDiv = document.createElement("div");
-    projectDiv.className = "bg-gray-100 p-3 rounded-lg shadow";
-
-    let buttonsHtml = "";
-    if (proj.site) {
-      buttonsHtml += `<a href="${proj.site}" target="_blank" class="border border-yellow-600 text-yellow-600 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-yellow-600 hover:text-white">${texts.interface}</a>`;
-    }
-    if (proj.repo) {
-      buttonsHtml += `<a href="${proj.repo}" target="_blank" class="border border-purple-900 text-purple-900 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-purple-900 hover:text-white">${texts.repo}</a>`;
-    }
-    if (proj.article) {
-      buttonsHtml += `<a href="${proj.article}" target="_blank" class="border border-orange-800 text-orange-800 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-orange-800 hover:text-white">${texts.article}</a>`;
-    }
-    if (proj.doc) {
-      buttonsHtml += `<a href="${proj.doc}" target="_blank" class="border border-blue-800 text-blue-800 px-2 py-1 rounded-full text-xs shadow-md transition hover:bg-blue-800 hover:text-white">${texts.doc}</a>`;
-    }
-
-    projectDiv.innerHTML = `
-      <h3 class="font-semibold text-sm">${proj.title}</h3>
-      <p class="text-xs text-gray-600 text-left">${proj.description}</p>
-      <div class="mt-2 flex gap-1">
-        ${buttonsHtml}
-      </div>
-    `;
-
-    container.appendChild(projectDiv);
-  });
-}
-
-function renderPagination() {
-  const projects = projectsData[currentTech] || [];
-  const filtered = currentFilter
-    ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter))
-    : projects;
-  const totalPages = Math.ceil(filtered.length / getProjectsPerPage());
-  const pageIndicator = document.getElementById("pageIndicator");
-  const texts = currentLang === "PT" ? textPT : textEN;
-  if (totalPages > 1) {
-    document.getElementById("paginationControls").classList.remove("hidden");
-    pageIndicator.innerText = `${texts.page} ${currentPage} / ${totalPages}`;
-    document.getElementById("prevPage").disabled = (currentPage === 1);
-    document.getElementById("nextPage").disabled = (currentPage === totalPages);
-  } else {
-    document.getElementById("paginationControls").classList.add("hidden");
-    pageIndicator.innerText = "";
-  }
-}
-
-function nextPage() {
-  const projects = projectsData[currentTech] || [];
-  const filtered = currentFilter
-    ? projects.filter(proj => proj.tags && proj.tags.includes(currentFilter))
-    : projects;
-  const totalPages = Math.ceil(filtered.length / getProjectsPerPage());
-  if (currentPage < totalPages) {
-    currentPage++;
-    renderProjects();
-    renderPagination();
-  }
-}
-
-function prevPage() {
-  if (currentPage > 1) {
-    currentPage--;
-    renderProjects();
-    renderPagination();
-  }
-}
-
-function hideProjects() {
   document.getElementById("projectsScreen").classList.remove("active");
-  document.getElementById("flipContainer").style.display = "block";
+  document.getElementById("badgesScreen").classList.remove("active");
+  document.getElementById("aboutScreen").classList.add("active");
+  updateLanguage();
 }
 
-function goHome() {
-  hideProjects();
-  document.getElementById("card").classList.remove("flipped");
+function voltarDoSobreMim() {
+  document.getElementById("aboutScreen").classList.remove("active");
+  document.getElementById("flipContainer").style.display = "flex";
 }
 
 function showBadges() {
@@ -269,18 +158,8 @@ function voltarDosProjects() {
   document.getElementById("flipContainer").style.display = "block";
 }
 
-function showAbout() {
-  document.getElementById("flipContainer").style.display = "none";
+function goHome() {
   document.getElementById("projectsScreen").classList.remove("active");
-  document.getElementById("badgesScreen").classList.remove("active");
-  document.getElementById("aboutScreen").classList.add("active");
-  updateLanguage(); // garante tradução correta
+  document.getElementById("flipContainer").style.display = "block";
+  document.getElementById("card").classList.remove("flipped");
 }
-
-function voltarDoSobreMim() {
-  document.getElementById("aboutScreen").classList.remove("active");
-  document.getElementById("flipContainer").style.display = "flex";
-}
-
-
-
