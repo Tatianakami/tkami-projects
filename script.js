@@ -17,11 +17,8 @@ const textPT = {
   doc: "Documentação",
   page: "Pag",
 aboutMe: `Estagiária na área de Dados e estudante de Ciência da Computação, com foco em análise, visualização e desenvolvimento de soluções orientadas a dados.
-
 Possuo experiência com SQL, Power BI e Python, aplicando esses conhecimentos em projetos práticos como análise de vendas, predição de churn e construção de pipelines de dados.
-
 Minha formação em Engenharia de Produção agrega uma visão analítica, estruturada e orientada a processos, permitindo transformar dados em insights estratégicos para tomada de decisão.
-
 Atualmente, venho desenvolvendo projetos voltados a Data Analytics e Data Engineering, com o objetivo de evoluir continuamente e construir soluções escaláveis, eficientes e de impacto real.`
 
 const textEN = {
@@ -40,11 +37,8 @@ const textEN = {
   doc: "Documentation",
   page: "Page",
 aboutMe: `I am a data-focused professional and Computer Science student, with a strong focus on data analysis, visualization, and building data-driven solutions.
-
 I have experience with SQL, Power BI, and Python, applying these tools in practical projects such as sales analysis, churn prediction, and data pipeline development.
-
 My background in Production Engineering brings a structured, analytical, and process-oriented mindset, enabling me to transform data into strategic insights for decision-making.
-
 Currently, I am developing projects in Data Analytics and Data Engineering, aiming to continuously grow and build scalable, efficient solutions that generate real impact.`
 
 let currentLang = "PT";
